@@ -73,3 +73,30 @@ reserveForm.addEventListener("submit", (event) => {
   dateInput.min = localDate;
 });
 
+(() => {
+  const hero = document.querySelector('.cinematic-hero');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const visual = hero.querySelector('.hero-visual');
+  const copy = hero.querySelector('.hero-copy');
+  const hint = hero.querySelector('.hero-scroll-hint');
+  if (!visual || !copy) return;
+  let ticking = false;
+  const update = () => {
+    const rect = hero.getBoundingClientRect();
+    const travel = Math.max(hero.offsetHeight - window.innerHeight, 1);
+    const progress = Math.min(1, Math.max(0, -rect.top / travel));
+    const scale = 1 + progress * .34;
+    const radius = Math.max(0, 2 - progress * 2);
+    visual.style.transform = `scale(${scale})`;
+    visual.style.borderRadius = `${radius}px`;
+    visual.style.filter = `saturate(${1 + progress * .12}) contrast(${1 + progress * .04})`;
+    copy.style.opacity = Math.min(1, Math.max(0, (progress - .18) * 2.2));
+    copy.style.transform = `translateY(${(1 - Math.min(1, progress * 1.8)) * 3}rem)`;
+    if (hint) hint.style.opacity = String(Math.max(0, 1 - progress * 5));
+    ticking = false;
+  };
+  const onScroll = () => { if (!ticking) { window.requestAnimationFrame(update); ticking = true; } };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
