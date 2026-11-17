@@ -65,10 +65,11 @@ reserveForm.addEventListener("submit", (event) => {
   const guests = data.get("guests");
 
   formStatus.textContent = selectedEvent
-    ? `${name} عزیز، درخواست شما برای «${selectedEvent}» به‌علاوه ${guests} نفر ثبت شد.`
-    : `${name} عزیز، درخواست رزرو میز برای ${guests} نفر ثبت شد.`;
+    ? `${name} عزیز، درخواست شما برای «${selectedEvent}» به‌علاوه ${guests} نفر در نسخه نمایشی بررسی شد؛ رزرو واقعی ثبت نشده است.`
+    : `${name} عزیز، درخواست رزرو میز برای ${guests} نفر در نسخه نمایشی بررسی شد؛ رزرو واقعی ثبت نشده است.`;
 
   reserveForm.reset();
   eventInput.value = "";
   dateInput.min = localDate;
 });
+
