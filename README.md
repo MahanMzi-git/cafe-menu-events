@@ -1,22 +1,39 @@
-# خانه سینادیا
+# Khane Cinadia
 
-وب‌سایت فارسی و RTL کافه «خانه سینادیا» با منوی قابل‌فیلتر، رویدادها، داستان خانه و فرم درخواست رزرو.
+A Persian RTL cafe website for coffee, conversation, reading, and cultural events.
 
-## اجرا
+## Features
 
-پوشه را در مرورگر باز کنید یا از یک سرور استاتیک استفاده کنید:
+- RTL Persian interface with a nostalgic Iranian visual direction
+- Coffee shop menu with coffee, drinks, cakes, and pastries
+- Filterable menu categories
+- Live music, poetry, and coffee workshop events
+- Cafe story section and reservation request form
+- Responsive desktop and mobile layout
+- Accessible navigation and reduced-motion support
 
-```bash
-cd cafe-menu-events-main
+## Tech Stack
+
+Static HTML5, CSS3, and vanilla JavaScript. No build step is required.
+
+## Run Locally
+
+```powershell
 python -m http.server 8000
 ```
 
-سپس به آدرس `http://localhost:8000` بروید.
+Open http://localhost:8000.
 
-## ساختار
+## Project Structure
 
-- `index.html`: ساختار صفحه و محتوای فارسی
-- `styles.css`: طراحی واکنش‌گرا و سیستم بصری
-- `script.js`: فیلتر منو، منوی موبایل و فرم رزرو
+- `index.html` - page structure and Persian content
+- `styles.css` - layout and responsive styles
+- `script.js` - menu filters, mobile navigation, and reservation feedback
 
-تصاویر نمایشی از Unsplash بارگذاری می‌شوند. تمام آیتم‌های منو، قیمت‌ها، تاریخ‌ها و اطلاعات برنامه‌ها برای نمونه هستند و در نسخه واقعی باید با داده تأییدشده جایگزین شوند.
+## Live Demo
+
+https://mahanmzi-git.github.io/cafe-menu-events/
+
+## Reservation Note
+
+The reservation form is a front-end demo. It does not send or store real reservations.
