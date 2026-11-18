@@ -6,12 +6,40 @@
     <meta name="theme-color" content="#2A1912" />
     <meta name="description" content="خانه سینادیا؛ کافه‌ای برای قهوه، دمنوش، خوراک‌های خانه و نشست‌های فرهنگی." />
     <title>خانه سینادیا | Khane Cinadia</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' rx='28' fill='%23f4ead7'/%3E%3Cpath d='M28 4C18 12 12 19 12 31c0 8 7 15 16 15s16-7 16-15C44 19 38 12 28 4Z' fill='none' stroke='%23a83a28' stroke-width='2'/%3E%3Cpath d='M28 14v25M20 31h16' fill='none' stroke='%23a83a28' stroke-width='2'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Rakkas&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="intro-open">
+    <div class="cinematic-intro" id="cinematic-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+      <div class="intro-media">
+        <video
+          class="cinematic-video"
+          id="cinadia-video"
+          src="assets/media/cinadia-hero.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          preload="metadata"
+          aria-label="ویدیوی معرفی خانه سینادیا"
+        >
+        </video>
+        <div class="intro-video-fallback" aria-hidden="true"></div>
+      </div>
+      <div class="intro-scrim" aria-hidden="true"></div>
+      <div class="intro-content">
+        <h1 id="intro-title">خانه سینادیا</h1>
+        <p>قهوه، مکث و گفت‌وگو؛ به ریتم خانه سینادیا وارد شوید.</p>
+        <button class="button intro-enter" type="button" data-intro-enter>ورود به خانه</button>
+      </div>
+      <button class="intro-skip" type="button" data-intro-skip>رد کردن معرفی</button>
+      <button class="video-toggle" type="button" data-video-toggle aria-controls="cinadia-video">توقف ویدیو</button>
+      <p class="intro-video-status" data-video-status role="status" hidden>معرفی تصویری در دسترس نیست؛ خانه همچنان باز است.</p>
+    </div>
+
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="خانه سینادیا، صفحه اصلی">
         <span class="brand-mark" aria-hidden="true">
@@ -37,24 +65,27 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">خانه‌ای در میان<br />سروصدای شهر</h1>
-          <p class="hero-lead">برای قهوه‌ای که فرصت دارد سرد شود، برای خواندن چند صفحه، و برای گفت‌وگویی که کاری ندارد زود تمام شود.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#menu">دیدن منو</a>
-            <a class="text-link" href="#events">جلسه‌های این ماه
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
-            </a>
+      <section class="hero cinematic-hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-scene">
+          <div class="hero-visual">
+            <div class="hero-video-slot" data-hero-video-slot>
+              <div class="hero-video-fallback" aria-hidden="true"></div>
+            </div>
+            <div class="hero-video-shade" aria-hidden="true"></div>
           </div>
-        </div>
-
-        <div class="hero-visual" role="img" aria-label="یک میز گرم و آرام در کافه">
-          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85" alt="" />
-          <div class="opening-card">
-            <span>هر روز</span>
-            <strong>۸ تا ۲۲</strong>
+          <div class="hero-copy">
+            <h1 id="hero-title">خانه‌ای در میان<br />سروصدای شهر</h1>
+            <p class="hero-lead">برای قهوه‌ای که فرصت دارد سرد شود، برای خواندن چند صفحه، و برای گفت‌وگویی که کاری ندارد زود تمام شود.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#menu">دیدن منو</a>
+              <a class="text-link" href="#events">جلسه‌های این ماه
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+              </a>
+            </div>
           </div>
+          <div class="hero-media-controls" data-hero-media-controls></div>
+          <p class="hero-video-status" data-hero-video-status role="status" hidden></p>
+          <p class="hero-scroll-hint" aria-hidden="true">اسکرول کنید <svg viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6" /></svg></p>
         </div>
       </section>
 
@@ -62,32 +93,32 @@
         <header class="section-heading">
           <div>
             <p class="section-mark">فهرست خانه</p>
-            <h2 id="menu-title">آنچه امروز در سفره است</h2>
+            <h2 id="menu-title">یک فنجان، به سلیقهٔ شما</h2>
           </div>
           <div class="menu-tabs" role="tablist" aria-label="دسته‌بندی منو">
             <button class="menu-tab active" type="button" role="tab" aria-selected="true" data-filter="all">همه</button>
             <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="drink">نوشیدنی</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="breakfast">صبحانه</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="sweet">شیرینی</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="coffee">قهوه</button>
+            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="sweet">کیک و شیرینی</button>
           </div>
         </header>
 
         <div class="menu-grid">
-          <article class="menu-item" data-category="drink">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=700&q=85" alt="کاپ قهوه" /></div>
+          <article class="menu-item" data-category="coffee">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85" alt="کاپ قهوه" /></div>
             <div class="menu-item-copy"><h3>کورتادو پسته</h3><p>اسپرسو، شیر بخار داده، کره پسته</p></div>
             <strong class="price">۱۵۰</strong>
           </article>
 
-          <article class="menu-item" data-category="breakfast">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=85" alt="صبحانه با نان تازه" /></div>
-            <div class="menu-item-copy"><h3>صبحانه خانه</h3><p>پنیر، کره، گردو، سبزی تازه، نیمرو</p></div>
-            <strong class="price">۳۲۰</strong>
+          <article class="menu-item" data-category="coffee">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=85" alt="کافه لاته با فوم شیر" /></div>
+            <div class="menu-item-copy"><h3>کافه لاته</h3><p>اسپرسو دبل، شیر گرم و فوم لطیف</p></div>
+            <strong class="price">۱۶۰</strong>
           </article>
 
           <article class="menu-item" data-category="sweet">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85" alt="شیرینی تازه" /></div>
-            <div class="menu-item-copy"><h3>شیرینی زعفران</h3><p>شیرینی نرم، خامه زعفرانی، هل</p></div>
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt="برش کیک شکلاتی" /></div>
+            <div class="menu-item-copy"><h3>کیک شکلاتی</h3><p>کیک شکلات تلخ با گاناش شکلات</p></div>
             <strong class="price">۱۷۰</strong>
           </article>
 
@@ -97,14 +128,14 @@
             <strong class="price">۱۲۰</strong>
           </article>
 
-          <article class="menu-item" data-category="breakfast">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85" alt="آش سبزیجات" /></div>
-            <div class="menu-item-copy"><h3>سوپ روز</h3><p>از سبزیجات بازار، عدس و نعنا داغ</p></div>
-            <strong class="price">۲۴۰</strong>
+          <article class="menu-item" data-category="coffee">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" alt="قهوه سرد با یخ" /></div>
+            <div class="menu-item-copy"><h3>آیس آمریکانو</h3><p>اسپرسو دبل، آب خنک و یخ</p></div>
+            <strong class="price">۱۳۰</strong>
           </article>
 
           <article class="menu-item" data-category="sweet">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=85" alt="نان تازه" /></div>
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85" alt="نان تازه" /></div>
             <div class="menu-item-copy"><h3>کرواسون کندوی عسل</h3><p>نان لایه‌ای، عسل، کره بادام زمینی</p></div>
             <strong class="price">۱۴۰</strong>
           </article>
@@ -215,7 +246,7 @@
     <footer class="site-footer">
       <div class="footer-brand">
         <strong>خانه سینادیا</strong>
-        <span>قهوه · خوراک · حرف</span>
+        <span>قهوه · شیرینی · حرف</span>
       </div>
       <address>
         تهران، خیابان مهدی شمالی، پلاک ۲۸<br />
