@@ -100,7 +100,9 @@ reserveForm.addEventListener("submit", (event) => {
   const scene = hero.querySelector(".hero-scene");
   const visual = hero.querySelector(".hero-visual");
   const copy = hero.querySelector(".hero-copy");
-  const hint = hero.querySelector(".hero-scroll-hint");
+  const opening = hero.querySelector(".hero-opening");
+  const details = hero.querySelector(".hero-details");
+  const header = document.querySelector(".site-header");
   let dismissed = false;
   let failed = false;
   let wantsPlayback = !reducedMotion.matches;
@@ -119,7 +121,7 @@ reserveForm.addEventListener("submit", (event) => {
   };
   const updateToggle = () => {
     toggle.textContent = video.paused ? "پخش ویدیو" : "توقف ویدیو";
-    toggle.hidden = failed;
+    toggle.hidden = failed || (dismissed && !video.paused);
   };
   const markReady = () => {
     video.classList.add("is-ready");
@@ -179,23 +181,35 @@ reserveForm.addEventListener("submit", (event) => {
   const renderHero = () => {
     frame = 0;
     if (!scene || !visual || !copy) return;
+    const bounds = hero.getBoundingClientRect();
     const progress = reducedMotion.matches ? 1 :
-      Math.min(1, Math.max(0, -hero.getBoundingClientRect().top / scrollTravel));
-    const eased = progress * (2 - progress);
-    const reveal = Math.min(1, Math.max(0, (progress - 0.08) / 0.62));
+      Math.min(1, Math.max(0, -bounds.top / scrollTravel));
+    // Finish expansion before the sticky scene ends, leaving a full-bleed hold.
+    const expansion = Math.min(1, progress / 0.72);
+    const eased = expansion * (2 - expansion);
+    const reveal = Math.min(1, Math.max(0, (progress - 0.28) / 0.4));
+    const openingFade = 1 - Math.min(1, Math.max(0, progress / 0.28));
+    const detailReveal = Math.min(1, Math.max(0, (progress - 0.38) / 0.34));
     visual.style.transform = reducedMotion.matches ? "" : "scale(" + (1 + (maxScale - 1) * eased) + ")";
     visual.style.borderRadius = reducedMotion.matches ? "" : (14 * (1 - eased)) + "px";
     copy.style.opacity = reducedMotion.matches ? "" : String(reveal);
-    copy.style.transform = reducedMotion.matches ? "" : "translateY(" + ((1 - reveal) * 24) + "px)";
-    copy.inert = !reducedMotion.matches && reveal < 0.25;
-    if (hint) hint.style.opacity = String(Math.max(0, 1 - progress * 6));
+    if (opening) opening.style.opacity = reducedMotion.matches ? "" : String(openingFade);
+    // The sentence itself stays at the viewport center; only its opacity changes.
+    if (details) {
+      details.style.opacity = reducedMotion.matches ? "" : String(detailReveal);
+      details.inert = !reducedMotion.matches && detailReveal < 0.25;
+    }
+    // Follow the sticky scene out of view instead of pinning navigation over later sections.
+    if (header) header.style.transform = "translateY(" + Math.min(0, bounds.bottom - scene.offsetHeight) + "px)";
   };
   const requestHeroFrame = () => {
     if (!frame) frame = window.requestAnimationFrame(renderHero);
   };
   const measureHero = () => {
     if (!scene || !visual) return;
-    maxScale = Math.max(scene.clientWidth / visual.offsetWidth, scene.clientHeight / visual.offsetHeight);
+    const size = window.getComputedStyle(visual);
+    // Fractional frame sizes plus a one-pixel overscan prevent edge seams.
+    maxScale = Math.max((scene.clientWidth + 1) / parseFloat(size.width), (scene.clientHeight + 1) / parseFloat(size.height));
     scrollTravel = Math.max(1, hero.offsetHeight - scene.offsetHeight);
     requestHeroFrame();
   };
@@ -212,6 +226,7 @@ reserveForm.addEventListener("submit", (event) => {
     const finish = () => {
       videoSlot.prepend(video);
       (heroControls || videoSlot).append(toggle);
+      updateToggle();
       intro.hidden = true;
       document.body.classList.remove("intro-open");
       pageShell.forEach((element) => {
