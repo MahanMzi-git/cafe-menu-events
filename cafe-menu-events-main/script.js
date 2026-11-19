@@ -3,40 +3,85 @@ document.documentElement.classList.add("js");
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!isOpen));
-  mainNav.classList.toggle("open", !isOpen);
-});
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    mainNav.classList.toggle("open", !isOpen);
+  });
 
-mainNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      mainNav.classList.remove("open");
+    });
+  });
+  const closeNav = () => {
     menuToggle.setAttribute("aria-expanded", "false");
     mainNav.classList.remove("open");
+  };
+  document.addEventListener("click", (event) => {
+    if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) closeNav();
   });
-});
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mainNav.classList.contains("open")) {
+      closeNav();
+      menuToggle.focus();
+    }
+  });
+}
 
 const reserveForm = document.querySelector(".reserve-form");
 const formStatus = document.querySelector(".form-status");
-const eventInput = reserveForm.querySelector('[name="event"]');
-const dateInput = reserveForm.querySelector('[name="date"]');
+const eventInput = reserveForm?.querySelector('[name="event"]');
+const dateInput = reserveForm?.querySelector('[name="date"]');
 
 const today = new Date();
 const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
   .toISOString()
   .split("T")[0];
-dateInput.min = localDate;
+if (dateInput) dateInput.min = localDate;
+const syncEventDate = () => {
+  if (!eventInput || !dateInput) return;
+  const display = reserveForm.querySelector('.event-date-display');
+  const selected = eventInput.selectedOptions[0];
+  const isEvent = Boolean(eventInput.value);
+  dateInput.hidden = isEvent;
+  dateInput.disabled = isEvent;
+  dateInput.required = !isEvent;
+  display.hidden = !isEvent;
+  display.value = selected?.dataset.date || '';
+  const timeInput = reserveForm.querySelector('[name="time"]');
+  const timeDisplay = reserveForm.querySelector('.event-time-display');
+  if (timeInput && timeDisplay) {
+    timeInput.hidden = isEvent;
+    timeInput.disabled = isEvent;
+    timeInput.required = !isEvent;
+    timeInput.value = isEvent ? selected?.dataset.time || '' : '';
+    timeDisplay.hidden = !isEvent;
+    timeDisplay.disabled = !isEvent;
+    timeDisplay.value = selected?.dataset.timeLabel || '';
+  }
+};
+const requestedEvent = new URLSearchParams(window.location.search).get('event');
+if (eventInput && [...eventInput.options].some(option => option.value === requestedEvent)) {
+  eventInput.value = requestedEvent;
+}
+eventInput?.addEventListener('change', syncEventDate);
+syncEventDate();
 
 document.querySelectorAll(".event-action").forEach((button) => {
+  if (!reserveForm || !eventInput) return;
   button.addEventListener("click", () => {
     eventInput.value = button.dataset.event;
+    syncEventDate();
     reserveForm.querySelector('[name="name"]').focus();
     document.querySelector("#reserve").scrollIntoView({ behavior: "smooth" });
     formStatus.textContent = `رزرو برای «${button.dataset.event}» انتخاب شد.`;
   });
 });
 
-reserveForm.addEventListener("submit", (event) => {
+reserveForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = new FormData(reserveForm);
   const name = data.get("name").trim();
@@ -49,7 +94,8 @@ reserveForm.addEventListener("submit", (event) => {
 
   reserveForm.reset();
   eventInput.value = "";
-  dateInput.min = localDate;
+  syncEventDate();
+  if (dateInput) dateInput.min = localDate;
 });
 
 // One media element is handed from the intro to the hero; its source is never reset.
@@ -169,6 +215,17 @@ reserveForm.addEventListener("submit", (event) => {
     visual.style.transform = reducedMotion.matches ? "" : "scale(" + (1 + (maxScale - 1) * eased) + ")";
     visual.style.borderRadius = reducedMotion.matches ? "" : (14 * (1 - eased)) + "px";
     copy.style.opacity = reducedMotion.matches ? "" : String(reveal);
+    // Fit both messages inside the actual media frame throughout expansion.
+    const mediaBounds = visual.getBoundingClientRect();
+    const textWidth = Math.max(0, Math.min(scene.clientWidth - 40, mediaBounds.width - 32));
+    copy.style.width = textWidth + "px";
+    copy.style.height = Math.max(0, mediaBounds.height - 24) + "px";
+    copy.querySelector("h1").style.fontSize = Math.min(72, textWidth / 7.5, mediaBounds.height / 4) + "px";
+    if (opening) {
+      opening.style.width = textWidth + "px";
+      opening.style.height = Math.max(0, mediaBounds.height - 24) + "px";
+      opening.style.fontSize = Math.min(40, textWidth / 10.5, mediaBounds.height / 7) + "px";
+    }
     if (opening) opening.style.opacity = reducedMotion.matches ? "" : String(openingFade);
     // The sentence itself stays at the viewport center; only its opacity changes.
     if (details) {
@@ -232,7 +289,7 @@ reserveForm.addEventListener("submit", (event) => {
       return;
     }
     if (event.key !== "Tab") return;
-    const buttons = [...intro.querySelectorAll("button:not([hidden]):not([disabled])")];
+    const buttons = [...intro.querySelectorAll("a[href], button:not([hidden]):not([disabled])")];
     const first = buttons[0];
     const last = buttons[buttons.length - 1];
     if (event.shiftKey && document.activeElement === first) {
@@ -243,7 +300,8 @@ reserveForm.addEventListener("submit", (event) => {
       first?.focus();
     }
   });
-  enters[0]?.focus({ preventScroll: true });
+  if (requestedEvent && eventInput?.value) dismissIntro("#reserve");
+  else intro.querySelector(".intro-enter")?.focus({ preventScroll: true });
 
   reducedMotion.addEventListener("change", () => {
     if (reducedMotion.matches) {
@@ -266,3 +324,80 @@ reserveForm.addEventListener("submit", (event) => {
     observer.observe(video);
   }
 })();
+
+// Compact, keyboard-accessible categories; all prices remain available without JS.
+(() => {
+  const tabs = [...document.querySelectorAll('.popular-tabs [role="tab"]')];
+  if (!tabs.length) return;
+  const activate = (index, focus = false) => {
+    tabs.forEach((tab, i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+      document.getElementById(tab.getAttribute('aria-controls')).hidden = i !== index;
+    });
+    if (focus) tabs[index].focus();
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(index));
+    tab.addEventListener('keydown', event => {
+      let next = index;
+      if (event.key === 'ArrowLeft') next = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowRight') next = (index + tabs.length - 1) % tabs.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(next, true);
+    });
+  });
+  activate(0);
+})();
+
+// Event categories reveal a single panel and retain shareable category links.
+(() => {
+ const tabs=[...document.querySelectorAll('.program-categories [role="tab"]')];
+ if(!tabs.length) return;
+ const activate=(index,focus=false)=>{
+  tabs.forEach((tab,i)=>{
+   const active=i===index;
+   tab.setAttribute('aria-selected',String(active));
+   tab.tabIndex=active?0:-1;
+   document.getElementById(tab.getAttribute('aria-controls')).hidden=!active;
+  });
+  if(focus) tabs[index].focus();
+ };
+ const fromHash=()=>{
+  const index=tabs.findIndex(tab=>tab.hash===location.hash);
+  activate(index<0?0:index);
+ };
+ tabs.forEach((tab,index)=>{
+  tab.addEventListener('click',event=>{
+   event.preventDefault();
+   history.replaceState(null,'',tab.hash);
+   activate(index);
+  });
+  tab.addEventListener('keydown',event=>{
+   let next=index;
+   if(event.key==='ArrowLeft') next=(index+1)%tabs.length;
+   else if(event.key==='ArrowRight') next=(index+tabs.length-1)%tabs.length;
+   else if(event.key==='Home') next=0;
+   else if(event.key==='End') next=tabs.length-1;
+   else return;
+   event.preventDefault();
+   history.replaceState(null,'',tabs[next].hash);
+   activate(next,true);
+  });
+ });
+ window.addEventListener('hashchange',fromHash);
+ fromHash();
+})();
+const storyVideo = document.querySelector('.story-video');
+if (storyVideo) {
+ const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+ const respectMotion = () => {
+  storyVideo.autoplay = !motionPreference.matches;
+  if (motionPreference.matches) storyVideo.pause();
+ };
+ respectMotion();
+ motionPreference.addEventListener('change', respectMotion);
+}

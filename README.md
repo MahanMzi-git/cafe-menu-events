@@ -6,7 +6,7 @@ A Persian RTL cafe website for Khane Cinadia, a warm neighborhood space for coff
 
 - RTL Persian interface with a nostalgic Iranian visual direction
 - Coffee shop menu with coffee, drinks, cakes, and pastries
-- Featured menu with 14 popular items; the full menu will have its own page
+- Featured menu with 14 popular items and a separate menu.html page with the confirmed menu
 - Upcoming live music, poetry, and coffee workshop events
 - Cafe story section and image-led editorial layout
 - Reservation request form for tables and events
@@ -55,3 +55,5 @@ The reservation form is currently a front-end demo. It shows local confirmation 
 ## License
 
 This project is provided for the Khane Cinadia website concept.
+
+The latest compact-navigation, dedicated-menu, hero-text-fit, and blue-event updates were checked in Chromium at 320, 390, 563, and 1440 CSS pixels. All 14 prices, menu navigation, return links, video text bounds across four scroll positions, and menu-page overflow passed; no JavaScript errors were reported. External stock images may fail when their host is unavailable.

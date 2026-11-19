@@ -14,6 +14,7 @@ Khane Cinadia uses a 1960s Tehran neighbourhood-cafe ephemera world: cream paper
 - Saffron red: #A83A28
 - Pistachio: #667344
 - Ink: #4A3A30
+- Events blue: #365A8C (muted event CTA); event section uses the supplied blue Persian rug image
 
 ## Typography
 
@@ -35,8 +36,17 @@ Audio remains muted. Autoplay is best-effort and a visible Play action remains a
 
 ## Requested spacing refinements
 
-The initial hero frame is 63% of its previous width and height (37% smaller in each dimension), centered in the viewport. Its measured expansion still covers the entire viewport. The hero headline has an explicit line break between “سینا و نادیا” and “یک زوج هنری”. The header has no bottom divider. Menu card minimum heights are 175px on desktop and 126px on mobile, 30% below the previous 250px and 180px; mobile vertical padding accommodates the existing images. The hero has no visible Pause button during playback; a conditional Play action remains for blocked autoplay and reduced motion.
+The initial hero frame is 63% of its previous width and height (37% smaller in each dimension), centered in the viewport. Its measured expansion still covers the entire viewport. The hero headline has an explicit line break between “سینا و نادیا” and “یک زوج هنری”. The header has no bottom divider. Featured menu rows now use 142px desktop, 106px tablet, and 86px narrow-mobile minimum heights; content may grow naturally. The hero has no visible Pause button during playback; a conditional Play action remains for blocked autoplay and reduced motion.
 
 ## Hero message sequence and header
 
 The cafe identity is right-aligned at every breakpoint, inset 44px on desktop and 20px on mobile. The initial centered message is “Where flowers bloom and memories live.” in an English-language LTR paragraph using the existing body font. It fades out through the first 28% of the native scroll runway, then the centered two-line Persian title fades in from 28% to 68%. Scrolling back reverses the sequence. There is no scroll cue. Reduced motion and no-JavaScript presentations show the Persian title directly without the English overlay or animated text transition.
+
+## Compact navigation and dedicated menu
+
+Mobile navigation opens as a 190px list below the hamburger, with Escape and outside-click dismissal. Both hero messages fit the measured video bounds during expansion. Featured rows are 142px on desktop, 106px on tablet, and 86px on narrow mobile, growing when copy requires it. The menu action navigates to menu.html; the dedicated page lists the 14 confirmed items and prices until additional menu content is supplied.
+
+Event cards use white surfaces over the supplied rug, compact 108–144px minimum heights, local traditional Persian artwork, dark copy, left-pointing reservation arrows, and a Rakkas weekly heading. The all-events action uses #C94840 with white text.
+
+## Featured printed menu
+Home favorites use three accessible RTL category tabs, compact name/price lists, and a cinnamon latte feature. All 14 confirmed prices remain intact. The supplied red Persian textile is restricted to a decorative left gutter, keeping the cream reading surface clear. Full-menu navigation remains available.
