@@ -15,7 +15,9 @@ A Persian RTL cafe website for Khane Cinadia, a warm neighborhood space for coff
 
 ## Cinematic Build
 
-The production `index.html` and the standalone page in `cafe-menu-events-main/` both serve the cinematic experience. They share the CSS, JavaScript, and supplied video in `cafe-menu-events-main/`. One muted video element is reused for the intro and hero, with Enter, Skip, and Play/Pause actions. The optional poster is not currently present, so a cafe-toned visual fallback appears if the video cannot load.
+The production `index.html` and the standalone page in `cafe-menu-events-main/` both serve the cinematic experience. They share the CSS, JavaScript, and supplied video in `cafe-menu-events-main/`. One muted video element is reused for the intro and hero, with Enter, Skip, and intro Play/Pause actions. The hero hides the Pause button during playback and retains a Play action only when needed. The optional poster is not currently present, so a cafe-toned visual fallback appears if the video cannot load.
+
+Scrolling expands the darkened hero video across the entire viewport behind the header, logo, and navigation. The Persian sentence “سینا و نادیا / یک زوج هنری” is centered independently over it. Reduced motion keeps this composition static with manual playback available.
 
 ## Tech Stack
 
@@ -53,3 +55,5 @@ The reservation form is currently a front-end demo. It shows local confirmation 
 ## License
 
 This project is provided for the Khane Cinadia website concept.
+
+The hero opens with “Where flowers bloom and memories live.” centered over the small video frame. Native scrolling fades it out, then reveals the two-line Persian title. The cafe identity stays right-aligned at all breakpoints. The scroll cue is removed, and reduced motion presents the Persian title directly.
