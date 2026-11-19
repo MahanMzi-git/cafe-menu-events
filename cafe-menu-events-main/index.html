@@ -32,11 +32,15 @@
       <div class="intro-scrim" aria-hidden="true"></div>
       <div class="intro-content">
         <h1 id="intro-title">خانه سینادیا</h1>
-        <p>قهوه، مکث و گفت‌وگو؛ به ریتم خانه سینادیا وارد شوید.</p>
-        <button class="button intro-enter" type="button" data-intro-enter>ورود به خانه</button>
+        <div class="intro-actions" role="group" aria-label="انتخاب مقصد">
+          <button class="button intro-enter" type="button" data-intro-enter data-intro-target="#menu-title">ورود به منو</button>
+          <div class="intro-links">
+            <button class="button intro-secondary" type="button" data-intro-enter data-intro-target="#top .brand">ورود به خانه</button>
+            <button class="button intro-secondary" type="button" data-intro-store>ورود به فروشگاه</button>
+          </div>
+        </div>
+        <p class="intro-store-status" data-intro-store-status role="status" hidden>فروشگاه هنوز در دسترس نیست.</p>
       </div>
-      <button class="intro-skip" type="button" data-intro-skip>رد کردن معرفی</button>
-      <button class="video-toggle" type="button" data-video-toggle aria-controls="cinadia-video">توقف ویدیو</button>
       <p class="intro-video-status" data-video-status role="status" hidden>معرفی تصویری در دسترس نیست؛ خانه همچنان باز است.</p>
     </div>
 
@@ -86,7 +90,9 @@
               </a>
             </div>
           </div>
-          <div class="hero-media-controls" data-hero-media-controls></div>
+          <div class="hero-media-controls" data-hero-media-controls>
+            <button class="video-toggle" type="button" data-video-toggle aria-controls="cinadia-video">توقف ویدیو</button>
+          </div>
           <p class="hero-video-status" data-hero-video-status role="status" hidden></p>
         </div>
       </section>
@@ -94,53 +100,96 @@
       <section class="menu-section" id="menu" aria-labelledby="menu-title">
         <header class="section-heading">
           <div>
-            <p class="section-mark">فهرست خانه</p>
-            <h2 id="menu-title">یک فنجان، به سلیقهٔ شما</h2>
-          </div>
-          <div class="menu-tabs" role="tablist" aria-label="دسته‌بندی منو">
-            <button class="menu-tab active" type="button" role="tab" aria-selected="true" data-filter="all">همه</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="drink">نوشیدنی</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="coffee">قهوه</button>
-            <button class="menu-tab" type="button" role="tab" aria-selected="false" data-filter="sweet">کیک و شیرینی</button>
+            <p class="section-mark">انتخاب‌های محبوب خانه</p>
+            <h2 id="menu-title" tabindex="-1">منوی پرطرفدار</h2>
           </div>
         </header>
 
         <div class="menu-grid">
-          <article class="menu-item" data-category="coffee">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85" alt="کاپ قهوه" /></div>
-            <div class="menu-item-copy"><h3>کورتادو پسته</h3><p>اسپرسو، شیر بخار داده، کره پسته</p></div>
-            <strong class="price">۱۵۰</strong>
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>امریکانو</h3></div>
+            <strong class="price">۱۹۵</strong>
           </article>
 
-          <article class="menu-item" data-category="coffee">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=85" alt="کافه لاته با فوم شیر" /></div>
-            <div class="menu-item-copy"><h3>کافه لاته</h3><p>اسپرسو دبل، شیر گرم و فوم لطیف</p></div>
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>لاته</h3></div>
+            <strong class="price">۲۵۵</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>موکا</h3></div>
+            <strong class="price">۳۰۵</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>سینامون لته</h3><p>اسپرسو، شیر، دارچین، عسل</p></div>
+            <strong class="price">۳۲۰</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>ایس موکا</h3></div>
+            <strong class="price">۳۰۵</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>ایس لته نارگیل</h3></div>
+            <strong class="price">۲۹۰</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>هات چاکلت</h3></div>
+            <strong class="price">۲۲۰</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>چای ماسالا</h3></div>
+            <strong class="price">۲۱۰</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>شربت راز زعفرانی</h3><p>بیدمشک، لیمو، تخم شربتی، پنیرک</p></div>
+            <strong class="price">۲۴۰</strong>
+          </article>
+
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>چای لیوانی هل یا دارچین</h3><p>یک استکان چای، هل یا دارچین، ترافل، نبات زعفرانی</p></div>
             <strong class="price">۱۶۰</strong>
           </article>
 
-          <article class="menu-item" data-category="sweet">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt="برش کیک شکلاتی" /></div>
-            <div class="menu-item-copy"><h3>کیک شکلاتی</h3><p>کیک شکلات تلخ با گاناش شکلات</p></div>
-            <strong class="price">۱۷۰</strong>
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>چای سبز</h3></div>
+            <strong class="price">۲۰۰</strong>
           </article>
 
-          <article class="menu-item" data-category="drink">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="چای دم‌کرده" /></div>
-            <div class="menu-item-copy"><h3>چای بهار نارنج</h3><p>چای سیاه، گل بهار نارنج، نبات</p></div>
-            <strong class="price">۱۲۰</strong>
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>شیک موز شکلات</h3></div>
+            <strong class="price">۳۵۰</strong>
           </article>
 
-          <article class="menu-item" data-category="coffee">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" alt="قهوه سرد با یخ" /></div>
-            <div class="menu-item-copy"><h3>آیس آمریکانو</h3><p>اسپرسو دبل، آب خنک و یخ</p></div>
-            <strong class="price">۱۳۰</strong>
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>شیک لوتوس</h3></div>
+            <strong class="price">۳۲۵</strong>
           </article>
 
-          <article class="menu-item" data-category="sweet">
-            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85" alt="نان تازه" /></div>
-            <div class="menu-item-copy"><h3>کرواسون کندوی عسل</h3><p>نان لایه‌ای، عسل، کره بادام زمینی</p></div>
-            <strong class="price">۱۴۰</strong>
+          <article class="menu-item">
+            <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=85" alt="" /></div>
+            <div class="menu-item-copy"><h3>دمنوش مخصوص سینادیا</h3><p>چای ترش، ریزمیوه‌های استوایی، نبات گل گاوزبان</p></div>
+            <strong class="price">۲۸۰</strong>
           </article>
+
         </div>
       </section>
 

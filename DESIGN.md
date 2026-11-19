@@ -21,11 +21,11 @@ The intro identity and main hero title use Rakkas for its warm, poster-like voic
 
 ## Signature
 
-High-contrast red-and-cream print blocks, thin double rules, small geometric rosettes, and asymmetric editorial compositions drawn from Iranian cafe ephemera.
+High-contrast red-and-cream print blocks, thin double rules, small geometric rosettes, and asymmetric editorial compositions drawn from Iranian cafe ephemera. The home menu showcases the supplied popular items and prices; the full menu belongs on its own page.
 
 ## Cinematic Media
 
-The cinematic build lives in `cafe-menu-events-main/` and uses the supplied `assets/media/cinadia-hero.mp4` as its primary visual. The video begins in a full-screen intro with the cafe identity, introductory brand message, a clear Enter action, and visible Skip Intro and Play/Pause controls. Escape also exits. After dismissal, the same video and playback control move into the hero without changing the source or resetting playback.
+The cinematic build lives in `cafe-menu-events-main/` and uses the supplied `assets/media/cinadia-hero.mp4` as its primary visual. The video begins in a full-screen intro with the cafe identity and three destination actions for the menu, home, and store. Escape exits. The intro has no subtitle or Skip Intro button. After dismissal, the same video and its playback control are shown in the hero without changing the source or resetting playback.
 
 The hero has a reserved-height sticky scene on a dark tea-brown ground. Native scrolling expands its central frame to cover the entire dynamic viewport, including behind the transparent cream-colored header, logo, and navigation. Expansion finishes at 72% of the scroll runway, leaving a short full-bleed hold before the scene exits. The header follows that exit and does not float over the later page sections. Fractional frame measurements and a one-pixel overscan prevent edge seams.
 

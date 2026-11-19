@@ -1,28 +1,5 @@
 document.documentElement.classList.add("js");
 
-const menuTabs = document.querySelectorAll(".menu-tab");
-const menuItems = document.querySelectorAll(".menu-item");
-
-menuTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    menuTabs.forEach((item) => {
-      item.classList.remove("active");
-      item.setAttribute("aria-selected", "false");
-    });
-
-    tab.classList.add("active");
-    tab.setAttribute("aria-selected", "true");
-    const filter = tab.dataset.filter;
-
-    menuItems.forEach((item) => {
-      item.classList.toggle(
-        "hidden",
-        filter !== "all" && item.dataset.category !== filter
-      );
-    });
-  });
-});
-
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
@@ -86,8 +63,7 @@ reserveForm.addEventListener("submit", (event) => {
   if (!intro || !video || !hero || !videoSlot || !toggle) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const enter = document.querySelector("[data-intro-enter]");
-  const skip = document.querySelector("[data-intro-skip]");
+  const enters = document.querySelectorAll("[data-intro-enter]");
   const statuses = [
     document.querySelector("[data-video-status]"),
     document.querySelector("[data-hero-video-status]"),
@@ -217,7 +193,7 @@ reserveForm.addEventListener("submit", (event) => {
   window.addEventListener("resize", measureHero, { passive: true });
   measureHero();
 
-  const dismissIntro = () => {
+  const dismissIntro = (targetSelector = "") => {
     if (dismissed) return;
     dismissed = true;
     // Try inside the user gesture as well as after the DOM handoff.
@@ -235,14 +211,20 @@ reserveForm.addEventListener("submit", (event) => {
       });
       measureHero();
       playVideo();
-      document.querySelector(".brand")?.focus({ preventScroll: true });
+      const destination = document.querySelector(targetSelector || ".brand");
+      destination?.scrollIntoView({ behavior: "smooth", block: "start" });
+      destination?.focus({ preventScroll: true });
     };
     if (reducedMotion.matches) finish();
     else window.setTimeout(finish, 650);
   };
   pageShell.forEach((element) => { element.inert = true; });
-  enter?.addEventListener("click", dismissIntro);
-  skip?.addEventListener("click", dismissIntro);
+  enters.forEach((enter) => {
+    enter.addEventListener("click", () => dismissIntro(enter.dataset.introTarget));
+  });
+  document.querySelector("[data-intro-store]")?.addEventListener("click", () => {
+    document.querySelector("[data-intro-store-status]").hidden = false;
+  });
   document.addEventListener("keydown", (event) => {
     if (dismissed) return;
     if (event.key === "Escape") {
@@ -261,7 +243,7 @@ reserveForm.addEventListener("submit", (event) => {
       first?.focus();
     }
   });
-  enter?.focus({ preventScroll: true });
+  enters[0]?.focus({ preventScroll: true });
 
   reducedMotion.addEventListener("change", () => {
     if (reducedMotion.matches) {
