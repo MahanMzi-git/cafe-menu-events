@@ -569,7 +569,7 @@ html.js body.menu-page-body .site-header {
 
 .story-section {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
   align-items: center;
   gap: 70px;
 }
@@ -1203,3 +1203,150 @@ html.js body.menu-page-body .site-header {
 .story-photo .story-video { display:block; width:100%; height:520px; object-fit:cover; border-radius:12px; }
 @media(max-width:760px) { .story-photo .story-video { height:275px; border-radius:8px; } }
 @media(max-width:380px) { .story-photo .story-video { height:225px; } }
+
+/* Allow media and content to shrink within their layout tracks. */
+.story-photo, .story-copy { min-width:0; }
+.story-photo .story-video { max-width:100%; }
+/* Keep story media portrait-shaped, with its quotation in normal flow. */
+.story-section .story-photo { width:100%; max-width:380px; justify-self:center; min-width:0; }
+.story-section .story-photo .story-video { width:100%; height:auto; aspect-ratio: 5 / 7; object-fit:cover; }
+.story-section .story-photo blockquote { position:static; inset:auto; box-sizing:border-box; width:100%; max-width:none; margin:12px 0 0; padding:18px 20px; font-size:16px; line-height:1.8; }
+@media(min-width:761px) {
+ .story-section { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+}
+@media(max-width:760px) {
+ .story-section .story-photo blockquote { padding:12px; font-size:13px; line-height:1.7; }
+}
+@media(max-width:380px) {
+ .story-section .story-photo blockquote { padding:9px; font-size:12px; }
+}
+/* Tablet and desktop story fits a viewport while retaining portrait media. */
+@media(min-width:761px) {
+ .story-section { padding-block:32px; }
+ .story-section .story-photo { width:97%; max-width:min(368.6px,calc((100svh - 180px) * .75988)); }
+ .story-section .story-photo .story-video { aspect-ratio:250 / 329; }
+ .story-section .story-photo blockquote { padding:14px 16px; font-size:15px; line-height:1.65; }
+ .story-section .story-copy { padding-block:0; }
+}
+/* Two compact home events per row on laptop and larger displays. */
+@media(min-width:1041px) {
+ .events-section .events-list { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+ .events-section .event-card { grid-template-columns:48px 88px minmax(0,1fr) 44px; gap:14px; padding:16px; min-height:124px; }
+ .events-section .event-image { height:92px; }
+ .events-section .event-copy { min-width:0; }
+ .events-section .event-copy h3 { font-size:22px; line-height:1.4; }
+ .events-section .event-action { width:44px; height:44px; }
+ .events-section .event-date span { font-size:36px; }
+}
+@media(min-width:1041px) {
+ .story-section { grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); }
+ .story-section .story-copy { grid-column:1; grid-row:1; }
+ .story-section .story-photo { grid-column:2; grid-row:1; }
+}
+/* The supplied transparent rectangular frame and film share one coordinate system. */
+.story-framed-video { position:relative; width:100%; aspect-ratio:1696 / 2528; }
+.story-framed-video::after { content:""; position:absolute; inset:0; background:url("assets/images/story-rectangle-frame.webp") center / 100% 100% no-repeat; pointer-events:none; }
+.story-section .story-photo .story-framed-video .story-video { position:absolute; left:20.4%; top:21%; width:59.8%; height:64.25%; aspect-ratio:auto; border-radius:0; object-fit:cover; }
+.story-section .story-photo { max-width:430px; }
+@media(min-width:761px) {
+ .story-section .story-photo { width:100%; max-width:min(430px,calc((100svh - 155px) * .68)); }
+}
+@media(max-width:760px) {
+ .story-section { grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:16px; }
+}
+@media(min-width:1041px) {
+ .story-section { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); }
+}
+/* Enlarge the frame by 36% and its film by 30% where the viewport allows. */
+.story-section .story-photo { max-width:584.8px; }
+.story-framed-video::before { content:""; position:absolute; left:20.4%; top:21%; width:59.8%; height:64.25%; background:#17120c; }
+.story-section .story-photo .story-framed-video .story-video { left:21.7191%; top:22.4173%; width:57.1618%; height:61.4154%; }
+@media(min-width:761px) {
+ .story-section .story-photo { max-width:min(584.8px,calc((100svh - 155px) * .9248)); }
+ .story-section { grid-template-columns:minmax(0,1.36fr) minmax(0,1fr); }
+}
+@media(min-width:1041px) {
+ .story-section { grid-template-columns:minmax(0,1fr) minmax(0,1.4fr); }
+}
+@media(min-width:400px) and (max-width:760px) {
+ .story-section { grid-template-columns:minmax(0,2.48fr) minmax(0,1fr); }
+}
+@media(max-width:399px) {
+ .story-section { grid-template-columns:1fr; }
+ .story-section .story-photo { width:72%; justify-self:center; }
+ .story-section .story-copy { width:100%; }
+}
+.story-section .story-copy .story-quote {
+ position:static; width:100%; max-width:560px; box-sizing:border-box;
+ margin:24px 0 0; padding:18px 20px;
+ color:var(--cream); background:var(--red);
+ font-size:16px; line-height:1.8; border-radius:8px;
+ box-shadow:var(--shadow);
+}
+/* A single quotation placed by the grid, without script relocation. */
+.story-section .story-quote { position:static; width:100%; max-width:none; box-sizing:border-box; margin:20px 0 0; padding:18px 20px; color:var(--cream); background:var(--red); font-size:16px; line-height:1.8; border-radius:8px; box-shadow:var(--shadow); }
+@media(min-width:761px) {
+ .story-section { grid-template-areas:"copy media" "quote media"; grid-template-rows:1fr 1fr; row-gap:0; align-items:start; }
+ .story-section .story-photo { grid-area:media; align-self:center; }
+ .story-section .story-copy { grid-area:copy; align-self:end; }
+ .story-section .story-quote { grid-area:quote; align-self:start; }
+}
+@media(min-width:761px) and (max-width:1040px) {
+ .story-section { grid-template-columns:minmax(0,1fr) minmax(0,1.36fr); }
+}
+@media(max-width:760px) {
+ .story-section { grid-template-areas:"media copy" "quote copy"; grid-template-rows:auto 1fr; row-gap:0; }
+ .story-section .story-photo { grid-area:media; }
+ .story-section .story-copy { grid-area:copy; }
+ .story-section .story-quote { grid-area:quote; font-size:13px; line-height:1.7; padding:12px; margin-top:12px; }
+}
+@media(max-width:399px) {
+ .story-section { grid-template-areas:"media" "quote" "copy"; grid-template-rows:auto auto auto; row-gap:16px; }
+ .story-section .story-quote { width:72%; justify-self:center; margin:0; }
+}
+/* A readable mobile story: heading, film, full-width prose, quotation. */
+@media(max-width:900px) {
+ .story-section { grid-template-columns:minmax(0,1fr); grid-template-areas:none; grid-template-rows:none; gap:22px; padding-block:48px; align-items:start; }
+ .story-section .story-copy { display:contents; }
+ .story-section .story-heading { grid-column:1; grid-row:1; width:100%; }
+ .story-section .story-heading h2 { max-width:none; margin-bottom:0; font-size:clamp(28px,6vw,38px); }
+ .story-section .story-heading .section-mark { margin-bottom:12px; }
+ .story-section .story-photo { grid-area:auto; grid-column:1; grid-row:2; width:min(100%,430px); max-width:430px; justify-self:center; }
+ .story-section .story-copy > p:not(.section-mark) { grid-column:1; width:100%; max-width:none; margin:0; font-size:18px; line-height:1.85; }
+ .story-section .story-copy > p:nth-of-type(1) { grid-row:3; }
+ .story-section .story-copy > p:nth-of-type(2) { grid-row:4; }
+ .story-section .story-quote { grid-area:auto; grid-column:1; grid-row:5; justify-self:stretch; width:100%; margin:0; padding:16px 18px; font-size:15px; line-height:1.8; }
+}
+/* Give the mobile story more room around its framed film. */
+@media(max-width:760px) {
+ .story-section .story-photo { width:85%; max-width:365.5px; }
+}
+/* Compact mobile menu rows with space reserved for the decorative textile. */
+@media(max-width:650px) {
+ .popular-paper { padding:14px 10px 16px 30px; }
+ .popular-paper::before { width:22px; left:0; background-size:70px auto; background-position:-46px top; }
+ .popular-prices { gap:9px; }
+ .popular-row, .popular-row:first-child { grid-template-columns:58px minmax(0,1fr) auto; grid-template-rows:auto; gap:9px; height:auto; min-height:104px; padding:10px 8px; }
+ .popular-photo { width:58px; height:74px; grid-column:1; grid-row:1; }
+ .popular-row dt { grid-column:2; grid-row:1; min-width:0; font-size:18px; line-height:1.4; }
+ .popular-row dt small { font-size:13px; line-height:1.5; margin-top:4px; }
+ .popular-row dd { grid-column:3; grid-row:1; margin:0; align-self:center; font-size:20px; }
+ .popular-tabs { padding-inline:5px; gap:4px 10px; }
+ .popular-tabs button { font-size:16px; }
+}
+@media(max-width:360px) {
+ .popular-row, .popular-row:first-child { grid-template-columns:50px minmax(0,1fr) auto; gap:6px; }
+ .popular-photo { width:50px; height:68px; }
+ .popular-row dt { font-size:17px; }
+ .popular-row dd { font-size:19px; }
+}
+/* Center the complete text group on the film aperture, below the frame crown. */
+.story-text-group { min-width:0; }
+@media(min-width:901px) {
+ .story-section { grid-template-areas:"text media"; grid-template-rows:auto; align-items:center; }
+ .story-section .story-text-group { grid-area:text; align-self:center; }
+ .story-section .story-copy { padding-block:0; }
+ .story-section .story-photo { transform:translateY(-3.125%); }
+ .story-section .story-quote { margin-top:24px; }
+}
+@media(max-width:900px) { .story-text-group { display:contents; } }
