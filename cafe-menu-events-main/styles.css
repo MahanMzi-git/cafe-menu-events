@@ -1428,7 +1428,12 @@ html.js body.menu-page-body .site-header {
  .story-section { grid-template-areas:"text media"; grid-template-rows:auto; align-items:center; }
  .story-section .story-text-group { grid-area:text; align-self:center; }
  .story-section .story-copy { padding-block:0; }
- .story-section .story-photo { transform:translateY(-3.125%); }
+ .story-section .story-photo {
+  width:80%;
+  max-width:min(467.84px,calc((100svh - 155px) * .73984));
+  justify-self:center;
+  transform:none;
+ }
  .story-section .story-quote { margin-top:24px; }
 }
 @media(max-width:900px) { .story-text-group { display:contents; } }

@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Rakkas&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="cafe-menu-events-main/styles.css?v=floating-header-3" />
-  </head>
+    <link rel="stylesheet" href="cafe-menu-events-main/styles.css?v=living-frame-compact-1" />
+  <link rel="stylesheet" href="cafe-menu-events-main/shared-header.css?v=5"/></head>
   <body class="intro-open">
     <div class="cinematic-intro" id="cinematic-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
       <div class="intro-media">
@@ -85,9 +85,7 @@
         </a>
   
         <div class="home-header-actions">
-          <a href="menu.html?search" aria-label="جست‌وجو در منو">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
-          </a>
+          <button class="site-search-trigger" type="button" data-site-search aria-label="جست‌وجو در سایت"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></button>
           <a href="#hero" aria-label="رفتن به خانه">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg>
           </a>
@@ -98,7 +96,7 @@
         </div>
         <nav class="main-nav" id="main-nav" aria-label="فهرست اصلی">
           <a href="menu.html">منو</a>
-          <a href="#events">رویدادها</a>
+          <a href="events.html">رویدادها</a>
           <a href="#story">داستان ما</a>
           <a class="nav-reserve" href="#reserve">رزرو میز</a>
         </nav>
@@ -209,5 +207,5 @@
     </footer>
 
     <script src="cafe-menu-events-main/script.js?v=floating-header-2"></script>
-  </body>
+  <script src="cafe-menu-events-main/site-search.js?v=2"></script></body>
 </html>
