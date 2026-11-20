@@ -135,6 +135,7 @@ reserveForm?.addEventListener("submit", (event) => {
 
   video.muted = true;
   video.defaultMuted = true;
+  video.loop = false;
   const showStatus = (message = "") => {
     statuses.forEach((status) => {
       status.textContent = message;
@@ -232,8 +233,6 @@ reserveForm?.addEventListener("submit", (event) => {
       details.style.opacity = reducedMotion.matches ? "" : String(detailReveal);
       details.inert = !reducedMotion.matches && detailReveal < 0.25;
     }
-    // Follow the sticky scene out of view instead of pinning navigation over later sections.
-    if (header) header.style.transform = "translateY(" + Math.min(0, bounds.bottom - scene.offsetHeight) + "px)";
   };
   const requestHeroFrame = () => {
     if (!frame) frame = window.requestAnimationFrame(renderHero);
@@ -250,14 +249,13 @@ reserveForm?.addEventListener("submit", (event) => {
   window.addEventListener("resize", measureHero, { passive: true });
   measureHero();
 
-  const dismissIntro = (targetSelector = "") => {
+  const dismissIntro = (targetSelector = "", focusHeader = true, instant = false) => {
     if (dismissed) return;
     dismissed = true;
-    // Try inside the user gesture as well as after the DOM handoff.
-    playVideo();
     intro.classList.add("is-dismissed");
     const finish = () => {
       videoSlot.prepend(video);
+      video.loop = true;
       (heroControls || videoSlot).append(toggle);
       updateToggle();
       intro.hidden = true;
@@ -266,15 +264,18 @@ reserveForm?.addEventListener("submit", (event) => {
         element.inert = false;
         element.removeAttribute("aria-hidden");
       });
+      const destination = targetSelector && document.querySelector(targetSelector);
+      if (destination && !header?.contains(destination)) {
+        destination.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+      renderHero();
       measureHero();
-      playVideo();
-      const destination = document.querySelector(targetSelector || ".brand");
-      destination?.scrollIntoView({ behavior: "smooth", block: "start" });
-      destination?.focus({ preventScroll: true });
+      if (focusHeader) (destination || header?.querySelector(".brand"))?.focus({ preventScroll: true });
     };
-    if (reducedMotion.matches) finish();
+    if (instant || reducedMotion.matches) finish();
     else window.setTimeout(finish, 650);
   };
+  video.addEventListener("ended", () => dismissIntro());
   pageShell.forEach((element) => { element.inert = true; });
   enters.forEach((enter) => {
     enter.addEventListener("click", () => dismissIntro(enter.dataset.introTarget));
@@ -300,7 +301,9 @@ reserveForm?.addEventListener("submit", (event) => {
       first?.focus();
     }
   });
-  if (requestedEvent && eventInput?.value) dismissIntro("#reserve");
+  const directSection = ["#menu", "#events", "#story", "#reserve"].includes(location.hash);
+  if (requestedEvent && eventInput?.value) dismissIntro("#reserve", false, true);
+  else if (directSection) dismissIntro(location.hash, false, true);
   else intro.querySelector(".intro-enter")?.focus({ preventScroll: true });
 
   reducedMotion.addEventListener("change", () => {
@@ -401,3 +404,4 @@ if (storyVideo) {
  respectMotion();
  motionPreference.addEventListener('change', respectMotion);
 }
+

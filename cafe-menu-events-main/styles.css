@@ -81,6 +81,80 @@ button { cursor: pointer; }
 }
 html.js .site-header { position: fixed; }
 
+html.js .site-header.home-header,
+.site-header.home-header {
+  position: sticky;
+  inset: 12px auto auto;
+  height: 64px;
+  max-width: 1160px;
+  width: calc(100% - 24px);
+  margin: 12px auto 0;
+  gap: 8px;
+  padding: 0 clamp(10px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--tea);
+  box-shadow: 0 6px 24px #2a191226;
+}
+
+html.js .intro-open .home-header { visibility: hidden; }
+.home-header .brand { gap: 8px; }
+.home-header .brand-mark { width: 36px; height: 36px; }
+.home-header .brand-mark svg { width: 26px; }
+.home-header .brand-copy strong { font-size: 18px; }
+.home-header .home-header-actions { display: flex; align-items: center; justify-self: end; gap: 4px; }
+.home-header .home-header-actions > a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+}
+.home-header .home-header-actions svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+body:has(.home-header) :is(#menu, #events, #story, #reserve) { scroll-margin-top: 88px; }
+
+.home-header .menu-toggle {
+  display: grid;
+  place-content: center;
+  gap: 7px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.home-header .menu-toggle span:not(.sr-only) { width: 20px; height: 2px; background: currentColor; }
+.home-header .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(4.5px) rotate(45deg); }
+.home-header .menu-toggle[aria-expanded="true"] span:nth-child(2) { transform: translateY(-4.5px) rotate(-45deg); }
+.home-header .main-nav {
+  position: absolute;
+  inset: calc(100% + 8px) auto auto 0;
+  display: none;
+  width: min(220px, 100%);
+  max-height: 54dvh;
+  overflow: auto;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--cream);
+  box-shadow: var(--shadow);
+}
+.home-header .main-nav.open { display: grid; }
+.home-header .main-nav a { padding: 8px 12px; }
+.home-header .main-nav a::after { display: none; }
+.home-header .brand-copy small { font-size: 9px; letter-spacing: .07em; }
+
 .brand {
   grid-column: 1;
   display: flex;
@@ -820,119 +894,146 @@ html.js body.menu-page-body .site-header {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
-/* A printed house menu, framed by the guest's Persian textile. */
-.popular-paper { position:relative; isolation:isolate; overflow:hidden; padding:28px 32px 24px 100px; background:#fffaf1; color:#42252a; border:1px solid #b88b77; border-radius:4px; box-shadow:0 12px 36px #42252a0d; }
-.popular-paper::before { content:""; position:absolute; z-index:-1; inset:0; background:url("assets/images/menu-paper-rug.jpg") left center / 100% 100% no-repeat; opacity:.85; }
-.popular-tabs { display:flex; gap:24px; border-bottom:1px solid #642e3830; }
-.popular-tabs button { font:inherit; font-size:20px; color:#70565a; background:transparent; border:0; border-bottom:3px solid transparent; padding:8px 0 12px; cursor:pointer; }
-.popular-tabs button[aria-selected="true"] { color:#642e38; border-bottom-color:#642e38; }
-.popular-tabs button:focus-visible, .popular-panel:focus-visible { outline:2px solid #642e38; outline-offset:4px; }
-.popular-body { display:grid; grid-template-columns:minmax(160px,.7fr) minmax(0,1.3fr); gap:36px; padding-block:24px; }
-.popular-feature { position:relative; border-inline-end:1px solid #642e3830; padding-inline-end:24px; }
-.popular-feature h3 { font-family:Rakkas,serif; font-size:32px; margin:0 0 8px; }
-.popular-feature p { margin:0 0 8px; font-size:17px; }
-.popular-feature strong { font-size:25px; font-weight:500; }
-.popular-cup { display:block; margin-top:12px; color:#8e4850; }
-.popular-cup svg { width:90px; height:70px; }
-.popular-panel[hidden] { display:none; }
-.popular-prices { margin:0; }
-.popular-row { display:flex; justify-content:space-between; gap:20px; padding:12px 0; border-bottom:1px dashed #642e3830; }
-.popular-row:first-child { padding-top:0; }
-.popular-row dt { font-size:21px; line-height:1.5; }
-.popular-row dt small { display:block; font-size:15px; color:#725b5b; max-width:35ch; }
-.popular-row dd { margin:0; font-size:23px; font-variant-numeric:tabular-nums; white-space:nowrap; }
-.popular-footer { border-top:1px solid #642e3830; padding-top:18px; display:flex; justify-content:flex-end; }
-.popular-footer .button { gap:12px; min-height:42px; padding:8px 18px; }
-.popular-footer svg { width:18px; height:18px; }
-@media(max-width:650px) {
- .popular-paper { padding:16px 18px 18px 44px; }
- .popular-paper::before { background-size:auto 100%; background-position:left center; }
- .popular-tabs { gap:0; justify-content:space-between; }
- .popular-tabs button { font-size:17px; padding:8px 2px 10px; }
- .popular-body { grid-template-columns:1fr; gap:18px; padding-block:18px; }
- .popular-feature { border-inline-end:0; border-bottom:1px solid #642e3830; padding:0 0 14px 65px; min-height:80px; }
- .popular-feature h3 { font-size:27px; margin-bottom:2px; }
- .popular-feature p { font-size:15px; margin-bottom:2px; }
- .popular-feature strong { font-size:21px; }
- .popular-cup { position:absolute; left:0; top:12px; margin:0; }
- .popular-cup svg { width:60px; height:60px; }
- .popular-row { padding:9px 0; gap:12px; }
- .popular-row dt { font-size:18px; }
- .popular-row dd { font-size:21px; }
- .popular-row dt small { font-size:14px; }
+/* Popular menu cards */
+.menu-section .section-heading {
+  display: block;
+  text-align: center;
 }
-/* Keep the textile strictly outside the reading column. */
-.popular-paper::before { right:auto; width:64px; background-size:auto 100%; opacity:1; }
-@media(max-width:650px) { .popular-paper::before { width:28px; } }
-.popular-cup svg, .popular-footer svg { stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; fill:none; }
-/* Equal photographic entries over the full supplied paper-and-rug image. */
-.popular-paper { padding:24px 28px 24px 120px; background:#fffaf1; }
-.popular-paper::before { inset:0; width:auto; background:url("assets/images/menu-paper-rug.jpg") left top / 100% 100% no-repeat; opacity:1; }
-.popular-body { display:block; padding-block:20px; }
-.popular-prices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
-.popular-row, .popular-row:first-child { display:grid; grid-template-columns:72px minmax(0,1fr) auto; align-items:center; gap:12px; height:122px; padding:12px; border:1px solid #642e3825; background:#fffaf1ed; border-radius:6px; }
-.popular-photo { width:72px; height:88px; object-fit:cover; border-radius:3px; }
-.popular-row dt { font-size:19px; }
-.popular-row dt small { font-size:14px; line-height:1.4; }
-.popular-row dd { font-size:22px; }
-@media(max-width:1000px) {
- .popular-prices { grid-template-columns:1fr; }
- .popular-paper { padding-left:100px; }
-}
-@media(max-width:650px) {
- .popular-paper { padding:16px 14px 18px 76px; }
- .popular-paper::before { width:auto; background-size:100% 100%; }
- .popular-tabs { gap:10px; flex-wrap:wrap; justify-content:flex-start; }
- .popular-tabs button { font-size:17px; min-height:44px; }
- .popular-row, .popular-row:first-child { grid-template-columns:60px minmax(0,1fr) auto; gap:9px; height:126px; padding:9px; }
- .popular-photo { width:60px; height:82px; }
- .popular-row dt { font-size:18px; }
- .popular-row dt small { font-size:13px; }
- .popular-row dd { font-size:20px; }
-}
-@media(max-width:380px) {
- .popular-paper { padding-left:52px; padding-right:10px; }
- .popular-row, .popular-row:first-child { grid-template-columns:48px minmax(0,1fr); height:158px; gap:6px; }
- .popular-photo { width:48px; height:68px; grid-row:1 / 3; }
- .popular-row dd { grid-column:2; }
-}
-/* The original textile ends within the left quarter; labels sit on plain paper. */
-.popular-paper::before { background-size:55% 100%; background-repeat:no-repeat; background-position:left top; }
-.popular-tabs { background:#fffaf1; padding:0 12px; border-radius:4px; gap:20px; }
-.popular-tabs button { color:#533038; font-weight:600; }
-.popular-tabs button[aria-selected="true"] { color:#642e38; }
-.popular-row, .popular-row:first-child { height:108px; background:#fffaf1; padding:10px; }
-.popular-photo { height:76px; }
-.popular-footer { justify-content:flex-start; }
-@media(max-width:650px) {
- .popular-paper::before { width:auto; background-size:55% 100%; }
- .popular-tabs { gap:8px; justify-content:space-between; padding:0 8px; }
- .popular-tabs button { font-size:17px; }
- .popular-row, .popular-row:first-child { height:112px; padding:8px; }
- .popular-photo { height:70px; }
-}
-@media(max-width:380px) {
- .popular-tabs { gap:4px 12px; justify-content:flex-start; }
- .popular-row, .popular-row:first-child { height:142px; }
- .popular-photo { height:64px; }
-}
-@media(max-width:380px) {
- .popular-row, .popular-row:first-child { height:164px; grid-template-columns:42px minmax(0,1fr); }
- .popular-photo { width:42px; }
- .popular-row dt small { font-size:13px; line-height:1.35; }
-}
-/* Independent book paper and fixed-scale ornamental ribbon. */
+
 .popular-paper {
- background:#fffaf1 url("assets/images/menu-book-paper.jpg") repeat;
- background-size:336px auto;
+  color: var(--ink, #2a1912);
 }
-.popular-paper::before {
- inset:0 auto 0 min(0px, calc(25% - 180px));
- width:180px;
- background:url("assets/images/menu-book-ribbon.png") left top / 180px auto repeat-y;
- opacity:1;
- pointer-events:none;
+
+.popular-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 clamp(12px, 4vw, 32px);
 }
+
+.popular-tabs button {
+  min-height: 44px;
+  padding: 4px 3px;
+  border: 0;
+  border-block-end: 2px solid transparent;
+  background: transparent;
+  color: #624c43;
+  font: inherit;
+  font-size: clamp(18px, 3vw, 22px);
+  cursor: pointer;
+}
+
+.popular-tabs button[aria-selected="true"] {
+  color: #8b3023;
+  border-block-end-color: currentColor;
+}
+
+.popular-tabs button:focus-visible,
+.popular-panel:focus-visible {
+  outline: 2px solid #8b3023;
+  outline-offset: 4px;
+}
+
+.popular-panel[hidden] {
+  display: none;
+}
+
+.popular-body {
+  padding-block: clamp(22px, 4vw, 38px);
+}
+
+.popular-prices {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 172px));
+  justify-content: center;
+  gap: clamp(8px, 2vw, 18px);
+  margin: 0 auto;
+}
+
+.popular-row {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  gap: 7px;
+  padding: clamp(6px, 1.2vw, 12px);
+  border: 1px solid #d5c3ab;
+  border-radius: 14px;
+  background: linear-gradient(#fffdf780, #fffdf780), url("assets/images/menu-card-linen.jpg") center / cover no-repeat, #fffdf7;
+  text-align: center;
+}
+
+.popular-photo {
+  display: block;
+  width: 100%;
+  max-width: 124px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  padding: 4px;
+  border: 1px solid #c9ad91;
+  border-radius: 50% 50% 3px 3px / 38% 38% 3px 3px;
+  background: #f4ead7;
+}
+
+.popular-row dt {
+  min-width: 0;
+  font-size: clamp(17px, 2.5vw, 22px);
+  font-weight: 600;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.popular-row dt small {
+  display: block;
+  margin-block-start: 6px;
+  color: #624c43;
+  font-size: clamp(15px, 2vw, 17px);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.popular-row dd {
+  position: absolute;
+  inset-block-start: 6px;
+  inset-inline-start: 6px;
+  margin: 0;
+  padding: 3px 5px;
+  border-radius: 4px;
+  background: #fffdf7;
+  color: #8b3023;
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.popular-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.popular-footer .button {
+  min-height: 44px;
+  gap: 8px;
+}
+
+.popular-footer svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 560px) {
+  .popular-prices {
+    grid-template-columns: repeat(3, minmax(0, 172px));
+  }
+}
+
 /* Wide reservation layout: form on the right, invitation on the left. */
 @media (min-width:1041px) {
  .reserve-section { grid-template-columns:minmax(0,1.65fr) minmax(0,.85fr); align-items:center; }
@@ -1320,25 +1421,6 @@ html.js body.menu-page-body .site-header {
 /* Give the mobile story more room around its framed film. */
 @media(max-width:760px) {
  .story-section .story-photo { width:85%; max-width:365.5px; }
-}
-/* Compact mobile menu rows with space reserved for the decorative textile. */
-@media(max-width:650px) {
- .popular-paper { padding:14px 10px 16px 30px; }
- .popular-paper::before { width:22px; left:0; background-size:70px auto; background-position:-46px top; }
- .popular-prices { gap:9px; }
- .popular-row, .popular-row:first-child { grid-template-columns:58px minmax(0,1fr) auto; grid-template-rows:auto; gap:9px; height:auto; min-height:104px; padding:10px 8px; }
- .popular-photo { width:58px; height:74px; grid-column:1; grid-row:1; }
- .popular-row dt { grid-column:2; grid-row:1; min-width:0; font-size:18px; line-height:1.4; }
- .popular-row dt small { font-size:13px; line-height:1.5; margin-top:4px; }
- .popular-row dd { grid-column:3; grid-row:1; margin:0; align-self:center; font-size:20px; }
- .popular-tabs { padding-inline:5px; gap:4px 10px; }
- .popular-tabs button { font-size:16px; }
-}
-@media(max-width:360px) {
- .popular-row, .popular-row:first-child { grid-template-columns:50px minmax(0,1fr) auto; gap:6px; }
- .popular-photo { width:50px; height:68px; }
- .popular-row dt { font-size:17px; }
- .popular-row dd { font-size:19px; }
 }
 /* Center the complete text group on the film aperture, below the frame crown. */
 .story-text-group { min-width:0; }
