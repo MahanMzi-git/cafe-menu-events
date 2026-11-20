@@ -2,6 +2,10 @@
 
 A Persian RTL cafe website for Khane Cinadia, a warm neighborhood space for coffee, conversation, reading, and intimate cultural events.
 
+<p align="center">
+<img src="cafe-menu-events-main/assets/images/project-preview-final.png" width="100%">
+</p>
+
 ## Features
 
 - RTL Persian interface with a nostalgic Iranian visual direction
