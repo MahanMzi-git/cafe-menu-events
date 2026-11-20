@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Rakkas&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=story-layout-2" />
   </head>
   <body class="intro-open">
     <div class="cinematic-intro" id="cinematic-intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
@@ -149,15 +149,16 @@
 
       <section class="story-section" id="story" aria-labelledby="story-title">
         <div class="story-photo">
-          <video class="story-video" autoplay muted loop playsinline controls preload="metadata" aria-label="ویدیوی فضای خانه سینادیا"><source src="assets/media/landingpage-video.mp4" type="video/mp4" />مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.</video>
-          <blockquote>«یک کافه خوب باید شلوغ باشد، اما نه آنقدر که به کسی اجازه خواندن ندهد.»</blockquote>
+          <div class="story-framed-video"><video class="story-video" autoplay muted loop playsinline controls preload="metadata" aria-label="ویدیوی فضای خانه سینادیا"><source src="assets/media/landingpage-video.mp4" type="video/mp4" />مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.</video></div>
+          
         </div>
-        <div class="story-copy">
-          <p class="section-mark">داستان خانه</p>
-          <h2 id="story-title">از یک میز کوچک شروع شد</h2>
-          <p>سینادیا از یاد و بوته‌های روی میز مادربزرگ‌ها شروع شد؛ از چای در سماور، نان تازه و گفت‌وگوهایی که هیچ‌وقت قرار نبود ثبت شوند.</p>
-          <p>امروز همان روح را با روایتی آرام‌تر ادامه می‌دهیم؛ جایی که هر مهمان بتواند برای لحظه‌ای خانه را دور خودش جمع کند.</p>
+        <div class="story-text-group"><div class="story-copy">
+          <header class="story-heading"><p class="section-mark">داستان خانه</p>
+          <h2 id="story-title">خانه‌ای برای زندگی با هنر</h2></header>
+          <p>سینادیا از همراهی سینا و نادیا شکل گرفت؛ سینا طراح طلا و جواهر است و نادیا هنرمند و نقاش. آن‌ها این خانه را ساختند تا کمی دورتر از هیاهوی شهر، برای خلق کردن، خیال‌پردازی و کنار هم بودن جا باز کنند.</p>
+          <p>کم‌کم این خلوت هنری به فضایی برای دیدار تبدیل شد؛ جایی که کنار عطر قهوه، می‌توان به موسیقی گوش سپرد، نمایشنامه خواند، نقاشی کرد و تجربه‌های تازه را با دیگران شریک شد.</p>
         </div>
+<blockquote class="story-quote">«یک کافه خوب باید شلوغ باشد، اما نه آنقدر که به کسی اجازه خواندن ندهد.»</blockquote></div>
       </section>
 
       <section class="reserve-section" id="reserve" aria-labelledby="reserve-title">
@@ -199,6 +200,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=story-layout-2"></script>
   </body>
 </html>
