@@ -21,11 +21,15 @@
 * { box-sizing: border-box; }
 
 html {
+  background: var(--paper);
   scroll-behavior: smooth;
   scrollbar-color: var(--red) var(--paper);
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   margin: 0;
   color: var(--tea);
   background: var(--paper);
@@ -743,13 +747,30 @@ html.js body.menu-page-body .site-header {
 }
 .reserve-form input::placeholder { color: #e9cec9; opacity: 1; }
 .reserve-form input:is([type="date"], [type="time"]) {
+  -webkit-appearance: none;
+  appearance: none;
   box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
   max-width: 100%;
+  font-size: 16px;
   direction: ltr;
+}
+.reserve-form > label:has(> input[type="date"]),
+.reserve-form > .time-choice {
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr);
 }
 .reserve-form input:is([type="date"], [type="time"]):not([hidden]) { display: block; }
 .reserve-form input:is([type="date"], [type="time"])::-webkit-date-and-time-value {
+  width: 100%;
+  min-width: 0;
   min-height: 1em;
+  text-align: start;
+}
+.reserve-form input:is([type="date"], [type="time"])::-webkit-datetime-edit {
+  min-width: 0;
+  padding: 0;
 }
 .reserve-form select option { color: #fff8ed; background: #4c222b; }
 .reserve-form input:focus, .reserve-form select:focus { border-width: 2px; border-color: var(--cream); }
@@ -1303,7 +1324,9 @@ html.js body.menu-page-body .site-header {
 .programs-heading .program-categories [aria-selected="true"] { background:#fff8ed; color:#16364b; }
 .programs-heading .program-categories a:hover { background:#ffffff18; }
 .programs-heading .program-categories [aria-selected="true"]:hover { background:#fff8ed; }
-@media(max-width:600px) { .programs-heading .program-categories a { font-size:17px; padding:9px 7px; } }
+@media(max-width:600px) {
+ .programs-heading .program-categories a { min-width:0; white-space:normal; text-align:center; font-size:17px; padding:9px 7px; }
+}
 @media(max-width:380px) { .programs-heading .program-categories { gap:2px; padding:4px; } .programs-heading .program-categories a { font-size:14px; padding:8px 4px; } }
 .events-page-body .header-home { display:grid; place-items:center; width:44px; height:44px; flex:none; margin-inline-start:auto; margin-inline-end:12px; border:1px solid #34262560; border-radius:50%; color:#342625; }
 .header-home svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linejoin:round; stroke-linecap:round; }
