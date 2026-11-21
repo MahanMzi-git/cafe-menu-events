@@ -20,11 +20,12 @@
       button.setAttribute('aria-pressed', String(button.dataset.filter === category));
     });
     empty.hidden = count > 0;
-    status.textContent = count.toLocaleString('fa-IR') + ' نوشیدنی در منو';
+    status.textContent = count.toLocaleString('fa-IR') + ' مورد در منو';
   }
   buttons.forEach(button => button.addEventListener('click', () => {
     category = button.dataset.filter;
     update();
+    button.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   }));
   document.querySelector('[data-reset]')?.addEventListener('click', () => {
     category = 'all';
