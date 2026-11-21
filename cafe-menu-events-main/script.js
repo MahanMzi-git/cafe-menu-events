@@ -302,7 +302,28 @@ reserveForm?.addEventListener("submit", (event) => {
     }
   });
   const directSection = ["#menu", "#events", "#story", "#reserve"].includes(location.hash);
+  const homeSection = new URLSearchParams(location.search).get("homeSection");
+  const returnSection = ["menu", "events"].includes(homeSection) &&
+    document.getElementById(homeSection);
   if (requestedEvent && eventInput?.value) dismissIntro("#reserve", false, true);
+  else if (returnSection) {
+    dismissIntro("", false, true);
+    window.scrollTo({ top: 0, behavior: "instant" });
+    document.fonts.ready.then(() => {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          returnSection.scrollIntoView({
+            behavior: reducedMotion.matches ? "instant" : "smooth",
+            block: "start",
+          });
+          const destination = new URL(location.href);
+          destination.searchParams.delete("homeSection");
+          destination.hash = homeSection;
+          history.replaceState(null, "", destination);
+        });
+      });
+    });
+  }
   else if (directSection) dismissIntro(location.hash, false, true);
   else intro.querySelector(".intro-enter")?.focus({ preventScroll: true });
 

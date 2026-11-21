@@ -1,0 +1,443 @@
+[
+  {
+    "menu_item": "Espresso",
+    "category": "hot-coffee",
+    "query": "Espresso photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: small ivory ceramic demitasse, rich hazelnut espresso crema."
+  },
+  {
+    "menu_item": "Americano",
+    "category": "hot-coffee",
+    "query": "Americano photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: black americano in medium ivory ceramic cup, dark translucent brown surface, sparse crema, no milk."
+  },
+  {
+    "menu_item": "Latte",
+    "category": "hot-coffee",
+    "query": "Latte photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: caffe latte in large ivory ceramic cup, milk coffee and fine silky microfoam with delicate heart latte art."
+  },
+  {
+    "menu_item": "Cappuccino",
+    "category": "hot-coffee",
+    "query": "Cappuccino photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: cappuccino in rounded small ivory ceramic cup, thick natural milk foam dome and brown espresso ring."
+  },
+  {
+    "menu_item": "Mocha",
+    "category": "hot-coffee",
+    "query": "Mocha photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: espresso and chocolate with steamed milk in ivory cup, chocolate-brown surface and subtle cocoa dusting."
+  },
+  {
+    "menu_item": "Cinnamon Latte",
+    "category": "hot-coffee",
+    "query": "Cinnamon Latte photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: cinnamon honey latte in ivory cup, silky milk foam lightly dusted with cinnamon."
+  },
+  {
+    "menu_item": "Caramel Macchiato",
+    "category": "hot-coffee",
+    "query": "Caramel Macchiato photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot caramel macchiato in clear handled glass, pale milk with espresso mark and fine caramel drizzle over milk foam, no ice."
+  },
+  {
+    "menu_item": "Cortado",
+    "category": "hot-coffee",
+    "query": "Cortado photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: cortado in small straight clear glass, equal amounts espresso and steamed milk, warm caramel color, very thin microfoam."
+  },
+  {
+    "menu_item": "Affogato",
+    "category": "hot-coffee",
+    "query": "Affogato photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one scoop vanilla ice cream partially melting in a small clear dessert glass, pooled hot espresso around base, glossy crema, no pouring hand."
+  },
+  {
+    "menu_item": "Nescafe",
+    "category": "hot-coffee",
+    "query": "Nescafe photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: instant coffee prepared as a creamy hot cafe drink in ivory ceramic mug, smooth light coffee brown surface, no branded packaging."
+  },
+  {
+    "menu_item": "Turkish Coffee",
+    "category": "hot-coffee",
+    "query": "Turkish Coffee photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: traditional Turkish coffee in small ivory porcelain demitasse and saucer, dark brown fine bubbly foam, no latte art."
+  },
+  {
+    "menu_item": "Syrup Coffee",
+    "category": "hot-coffee",
+    "query": "Syrup Coffee photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: neutral elegant hot black coffee with dissolved syrup in ivory cup, dark brown coffee surface, no unconfirmed flavor garnish."
+  },
+  {
+    "menu_item": "Hot Chocolate",
+    "category": "hot-drinks",
+    "query": "Hot Chocolate photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: rich hot chocolate in ivory ceramic mug, glossy deep cocoa-brown surface."
+  },
+  {
+    "menu_item": "Karak Tea",
+    "category": "hot-drinks",
+    "query": "Karak Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot strong karak milk tea in clear handled glass, rich caramel-tan tea, light natural bubbles."
+  },
+  {
+    "menu_item": "Masala Chai",
+    "category": "hot-drinks",
+    "query": "Masala Chai photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot masala milk chai in ivory ceramic cup, warm spice-brown milk tea, light froth."
+  },
+  {
+    "menu_item": "Cinnamon Honey Milk",
+    "category": "hot-drinks",
+    "query": "Cinnamon Honey Milk photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot honey milk in clear handled glass, pale ivory warm milk with fine cinnamon dusting."
+  },
+  {
+    "menu_item": "Saffron Masala",
+    "category": "hot-drinks",
+    "query": "Saffron Masala photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot saffron masala milk tea in clear handled glass, creamy warm golden saffron color with delicate froth."
+  },
+  {
+    "menu_item": "Nut Chocolate",
+    "category": "hot-drinks",
+    "query": "Nut Chocolate photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot nut chocolate in ivory ceramic mug, glossy nut-brown chocolate, neutral presentation with no specific nut variety shown."
+  },
+  {
+    "menu_item": "Hot Lotus",
+    "category": "hot-drinks",
+    "query": "Hot Lotus photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot speculoos biscuit milk drink in ivory ceramic cup, creamy caramel beige drink with finely crumbled unbranded speculoos dusting, no embossed lettering."
+  },
+  {
+    "menu_item": "Apple Cinnamon Tea Latte",
+    "category": "hot-drinks",
+    "query": "Apple Cinnamon Tea Latte photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot apple cinnamon tea latte in clear handled glass, warm golden-tan milk tea with light foam and cinnamon dusting."
+  },
+  {
+    "menu_item": "Iced Espresso",
+    "category": "cold-drinks",
+    "query": "Iced Espresso photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one short iced espresso in short clear tumbler, dark concentrated espresso and a few crystal clear ice cubes, thin crema, no milk."
+  },
+  {
+    "menu_item": "Iced Americano",
+    "category": "cold-drinks",
+    "query": "Iced Americano photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced americano in tall clear tumbler, transparent deep coffee-brown liquid filled with clear ice cubes, no milk."
+  },
+  {
+    "menu_item": "Iced Latte",
+    "category": "cold-drinks",
+    "query": "Iced Latte photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced caffe latte in tall clear glass, creamy milk base with espresso swirls and clear ice cubes."
+  },
+  {
+    "menu_item": "Iced Mocha",
+    "category": "cold-drinks",
+    "query": "Iced Mocha photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced mocha in tall clear glass, chocolate and milk coffee with clear ice cubes, subtle chocolate streaks inside glass."
+  },
+  {
+    "menu_item": "Iced Caramel Macchiato",
+    "category": "cold-drinks",
+    "query": "Iced Caramel Macchiato photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced caramel macchiato in tall clear glass, pale milk bottom and dark espresso gradient top, clear ice cubes and fine caramel drizzle."
+  },
+  {
+    "menu_item": "Strawberry Iced Latte",
+    "category": "cold-drinks",
+    "query": "Strawberry Iced Latte photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced strawberry coffee latte in tall clear glass, natural pink strawberry puree bottom, ivory milk middle and thin espresso top, clear ice cubes."
+  },
+  {
+    "menu_item": "Coconut Iced Latte",
+    "category": "cold-drinks",
+    "query": "Coconut Iced Latte photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced coconut milk coffee latte in tall clear glass, ivory coconut milk and espresso gradient, clear ice cubes, no fruit or unconfirmed garnish."
+  },
+  {
+    "menu_item": "Coconut Milk",
+    "category": "cold-drinks",
+    "query": "Coconut Milk photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one glass coconut milk, pure opaque creamy white liquid in elegant clear tumbler, tiny natural bubbles, no coffee, no fruit props."
+  },
+  {
+    "menu_item": "Iced Chocolate",
+    "category": "cold-drinks",
+    "query": "Iced Chocolate photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one iced chocolate milk in tall clear glass, rich uniform cocoa-brown liquid with clear ice cubes, no coffee."
+  },
+  {
+    "menu_item": "Chocolate Banana Milk",
+    "category": "cold-drinks",
+    "query": "Chocolate Banana Milk photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one chocolate banana milk drink in tall clear glass, smooth pale cocoa tan liquid with subtle banana texture, no ice cream scoop or whipped cream."
+  },
+  {
+    "menu_item": "Strawberry Milkshake",
+    "category": "milkshakes",
+    "query": "Strawberry Milkshake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one thick strawberry milkshake in elegant clear soda glass, natural dusty pink blended strawberry ice cream texture, modest soft peak and tiny strawberry flecks."
+  },
+  {
+    "menu_item": "Lotus Milkshake",
+    "category": "milkshakes",
+    "query": "Lotus Milkshake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one thick speculoos biscuit milkshake in elegant clear soda glass, caramel beige blended ice cream texture with light unbranded biscuit crumbs, no biscuit lettering."
+  },
+  {
+    "menu_item": "Chocolate Milkshake",
+    "category": "milkshakes",
+    "query": "Chocolate Milkshake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one thick chocolate milkshake in elegant clear soda glass, rich dark cocoa-brown blended ice cream texture with modest soft peak and chocolate shavings."
+  },
+  {
+    "menu_item": "Peanut Butter Milkshake",
+    "category": "milkshakes",
+    "query": "Peanut Butter Milkshake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one thick peanut butter milkshake in elegant clear soda glass, creamy tan blended ice cream texture with a little peanut butter ribbon on top."
+  },
+  {
+    "menu_item": "Vanilla Milkshake",
+    "category": "milkshakes",
+    "query": "Vanilla Milkshake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one thick vanilla milkshake in elegant clear soda glass, ivory blended ice cream texture with delicate vanilla speckles and soft peak."
+  },
+  {
+    "menu_item": "Coffee Milkshake",
+    "category": "milkshakes",
+    "query": "Coffee Milkshake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one thick coffee milkshake in elegant clear soda glass, medium caramel coffee-brown blended ice cream texture, soft peak, no ice cubes."
+  },
+  {
+    "menu_item": "Green Ravi Sherbet",
+    "category": "special-drinks",
+    "query": "Green Ravi Sherbet photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": true,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one traditional Persian-style refreshing sherbet in tall elegant transparent glass, clear refreshing green colored liquid with ice, no specific fruit, seeds, herbs or other ingredient garnish; color concept only."
+  },
+  {
+    "menu_item": "Ghazal Nosh Sherbet",
+    "category": "special-drinks",
+    "query": "Ghazal Nosh Sherbet photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": true,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one traditional Persian-style refreshing sherbet in tall elegant transparent glass, beautiful translucent dusty rose colored liquid with ice; neutral presentation, no fruit, seeds, herbs or other ingredient garnish; color concept only."
+  },
+  {
+    "menu_item": "Zarrin Nosh Sherbet",
+    "category": "special-drinks",
+    "query": "Zarrin Nosh Sherbet photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": true,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one traditional Persian-style refreshing sherbet in tall elegant transparent glass, luminous golden yellow amber colored liquid with ice, no fruit, seeds, herbs or other ingredient garnish; color concept only."
+  },
+  {
+    "menu_item": "Purple Mystery Sherbet",
+    "category": "special-drinks",
+    "query": "Purple Mystery Sherbet photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": true,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one traditional Persian-style refreshing sherbet in tall elegant transparent glass, rich translucent purple violet colored liquid with ice, no fruit, seeds, herbs or other ingredient garnish; color concept only."
+  },
+  {
+    "menu_item": "Black Tea",
+    "category": "tea",
+    "query": "Black Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one traditional hot black tea in elegant clear handled glass on ivory saucer, luminous reddish amber tea, no milk."
+  },
+  {
+    "menu_item": "Green Tea",
+    "category": "tea",
+    "query": "Green Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one hot green tea in elegant clear handled glass on ivory saucer, delicate pale golden green transparent infusion, no milk."
+  },
+  {
+    "menu_item": "Moroccan Tea",
+    "category": "tea",
+    "query": "Moroccan Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one Moroccan mint green tea in elegant clear traditional tea glass, golden green transparent tea with a few fresh mint leaves in glass, no milk."
+  },
+  {
+    "menu_item": "Sinadia Special Herbal Tea",
+    "category": "tea",
+    "query": "Sinadia Special Herbal Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one special hibiscus and tropical fruit herbal infusion in clear handled glass, deep warm ruby red tea, no milk, based on existing cafe menu hibiscus infusion."
+  },
+  {
+    "menu_item": "Relaxing Herbal Tea",
+    "category": "tea",
+    "query": "Relaxing Herbal Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": true,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one small elegant transparent glass teapot filled with warm golden amber herbal infusion, neutral calming presentation with a few soft out-of-focus generic botanical silhouettes in distant background, no identifiable herb species or ingredient claims, no extra cup."
+  },
+  {
+    "menu_item": "Apple Cinnamon Herbal Tea",
+    "category": "tea",
+    "query": "Apple Cinnamon Herbal Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one apple cinnamon herbal tea in clear handled glass, warm transparent amber infusion with one thin apple slice and cinnamon stick inside, no milk."
+  },
+  {
+    "menu_item": "Healthy Herbal Tea",
+    "category": "tea",
+    "query": "Healthy Herbal Tea photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": true,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one herbal tea in elegant transparent glass, light golden green infusion with subtle generic non-identifiable botanical decoration in distant background, no specific ingredient claims, no milk."
+  },
+  {
+    "menu_item": "Two Scoops of Vanilla Ice Cream",
+    "category": "desserts",
+    "query": "Two Scoops of Vanilla Ice Cream photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Missing: no approved matching stock source and generation quota exhausted",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: exactly two distinct scoops of vanilla ice cream in one small ivory ceramic dessert bowl, realistic creamy ivory vanilla speckles, soft melting edge, no toppings, no extra scoops."
+  },
+  {
+    "menu_item": "Saffron Cake",
+    "category": "desserts",
+    "query": "Saffron Cake photo",
+    "research_scope": "Unsplash and Pexels; extended web search for specialty items",
+    "outcome": "Image saved; see source CSV",
+    "visual_concept": false,
+    "prompt": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: one single slice golden saffron cake on elegant ivory plate, realistic moist fine yellow crumb and thin golden crust, no berries or unconfirmed decorations."
+  }
+]

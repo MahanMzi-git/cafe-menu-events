@@ -1,0 +1,247 @@
+[
+  {
+    "item": "اسپرسو",
+    "path": "assets/images/menu/hot-coffee/espresso.jpg",
+    "available": true
+  },
+  {
+    "item": "آمریکانو",
+    "path": "assets/images/menu/hot-coffee/americano.jpg",
+    "available": true
+  },
+  {
+    "item": "لاته",
+    "path": "assets/images/menu/hot-coffee/latte.jpg",
+    "available": true
+  },
+  {
+    "item": "کاپوچینو",
+    "path": "assets/images/menu/hot-coffee/cappuccino.jpg",
+    "available": true
+  },
+  {
+    "item": "موکا",
+    "path": "assets/images/menu/hot-coffee/mocha.jpg",
+    "available": true
+  },
+  {
+    "item": "سینامون لاته",
+    "path": "assets/images/menu/hot-coffee/cinnamon-latte.jpg",
+    "available": true
+  },
+  {
+    "item": "کارامل ماکیاتو",
+    "path": "assets/images/menu/hot-coffee/caramel-macchiato.jpg",
+    "available": true
+  },
+  {
+    "item": "کورتادو",
+    "path": "assets/images/menu/hot-coffee/cortado.jpg",
+    "available": true
+  },
+  {
+    "item": "آفوگاتو",
+    "path": "assets/images/menu/hot-coffee/affogato.jpg",
+    "available": true
+  },
+  {
+    "item": "نسکافه",
+    "path": "assets/images/menu/hot-coffee/nescafe.jpg",
+    "available": true
+  },
+  {
+    "item": "قهوه ترک",
+    "path": "assets/images/menu/hot-coffee/turkish-coffee.jpg",
+    "available": true
+  },
+  {
+    "item": "سیروپ",
+    "path": "assets/images/menu/hot-coffee/syrup-coffee.jpg",
+    "available": true
+  },
+  {
+    "item": "هات چاکلت",
+    "path": "assets/images/menu/hot-drinks/hot-chocolate.jpg",
+    "available": true
+  },
+  {
+    "item": "چای کرک",
+    "path": "assets/images/menu/hot-drinks/karak-tea.jpg",
+    "available": true
+  },
+  {
+    "item": "چای ماسالا",
+    "path": "assets/images/menu/hot-drinks/masala-chai.jpg",
+    "available": true
+  },
+  {
+    "item": "شیر عسل دارچین",
+    "path": "assets/images/menu/hot-drinks/cinnamon-honey-milk.jpg",
+    "available": true
+  },
+  {
+    "item": "ماسالا زعفرانی",
+    "path": "assets/images/menu/hot-drinks/saffron-masala.jpg",
+    "available": true
+  },
+  {
+    "item": "نات چاکلت",
+    "path": "assets/images/menu/hot-drinks/nut-chocolate.jpg",
+    "available": true
+  },
+  {
+    "item": "هات لوتوس",
+    "path": "assets/images/menu/hot-drinks/hot-lotus.jpg",
+    "available": true
+  },
+  {
+    "item": "چای لته سیب دارچین",
+    "path": "assets/images/menu/hot-drinks/apple-cinnamon-tea-latte.jpg",
+    "available": false
+  },
+  {
+    "item": "آیس اسپرسو",
+    "path": "assets/images/menu/cold-drinks/iced-espresso.jpg",
+    "available": true
+  },
+  {
+    "item": "آیس آمریکانو",
+    "path": "assets/images/menu/cold-drinks/iced-americano.jpg",
+    "available": true
+  },
+  {
+    "item": "آیس لته",
+    "path": "assets/images/menu/cold-drinks/iced-latte.jpg",
+    "available": true
+  },
+  {
+    "item": "آیس موکا",
+    "path": "assets/images/menu/cold-drinks/iced-mocha.jpg",
+    "available": true
+  },
+  {
+    "item": "آیس کارامل ماکیاتو",
+    "path": "assets/images/menu/cold-drinks/iced-caramel-macchiato.jpg",
+    "available": false
+  },
+  {
+    "item": "آیس لته توت‌فرنگی",
+    "path": "assets/images/menu/cold-drinks/strawberry-iced-latte.jpg",
+    "available": false
+  },
+  {
+    "item": "آیس لته نارگیل",
+    "path": "assets/images/menu/cold-drinks/coconut-iced-latte.jpg",
+    "available": false
+  },
+  {
+    "item": "شیر نارگیل",
+    "path": "assets/images/menu/cold-drinks/coconut-milk.jpg",
+    "available": true
+  },
+  {
+    "item": "آیس چاکلت",
+    "path": "assets/images/menu/cold-drinks/iced-chocolate.jpg",
+    "available": true
+  },
+  {
+    "item": "شیک موز شکلات",
+    "path": "assets/images/menu/cold-drinks/chocolate-banana-milk.jpg",
+    "available": false
+  },
+  {
+    "item": "شیک توت فرنگی",
+    "path": "assets/images/menu/milkshakes/strawberry-milkshake.jpg",
+    "available": true
+  },
+  {
+    "item": "شیک لوتوس",
+    "path": "assets/images/menu/milkshakes/lotus-milkshake.jpg",
+    "available": false
+  },
+  {
+    "item": "شیک شکلات",
+    "path": "assets/images/menu/milkshakes/chocolate-milkshake.jpg",
+    "available": true
+  },
+  {
+    "item": "شیک بادام زمینی",
+    "path": "assets/images/menu/milkshakes/peanut-butter-milkshake.jpg",
+    "available": false
+  },
+  {
+    "item": "شیک وانیل",
+    "path": "assets/images/menu/milkshakes/vanilla-milkshake.jpg",
+    "available": true
+  },
+  {
+    "item": "شیک قهوه",
+    "path": "assets/images/menu/milkshakes/coffee-milkshake.jpg",
+    "available": false
+  },
+  {
+    "item": "شربت راوی سبز",
+    "path": "assets/images/menu/special-drinks/green-ravi-sherbet.jpg",
+    "available": true
+  },
+  {
+    "item": "شربت غزل نوش",
+    "path": "assets/images/menu/special-drinks/ghazal-nosh-sherbet.jpg",
+    "available": false
+  },
+  {
+    "item": "شربت زرین نوش",
+    "path": "assets/images/menu/special-drinks/zarrin-nosh-sherbet.jpg",
+    "available": false
+  },
+  {
+    "item": "شربت راز ارغوانی",
+    "path": "assets/images/menu/special-drinks/purple-mystery-sherbet.jpg",
+    "available": false
+  },
+  {
+    "item": "چای لیوانی",
+    "path": "assets/images/menu/tea/black-tea.jpg",
+    "available": true
+  },
+  {
+    "item": "چای سبز",
+    "path": "assets/images/menu/tea/green-tea.jpg",
+    "available": true
+  },
+  {
+    "item": "چای مراکشی",
+    "path": "assets/images/menu/tea/moroccan-tea.jpg",
+    "available": false
+  },
+  {
+    "item": "دمنوش مخصوص سینادیا",
+    "path": "assets/images/menu/tea/sinadia-special-herbal-tea.jpg",
+    "available": true
+  },
+  {
+    "item": "دمنوش آرامش",
+    "path": "assets/images/menu/tea/relaxing-herbal-tea.jpg",
+    "available": true
+  },
+  {
+    "item": "دمنوش سیب دارچین",
+    "path": "assets/images/menu/tea/apple-cinnamon-herbal-tea.jpg",
+    "available": false
+  },
+  {
+    "item": "دمنوش سلامت",
+    "path": "assets/images/menu/tea/healthy-herbal-tea.jpg",
+    "available": true
+  },
+  {
+    "item": "دو اسکوپ بستنی وانیلی",
+    "path": "assets/images/menu/desserts/two-scoops-of-vanilla-ice-cream.jpg",
+    "available": false
+  },
+  {
+    "item": "کیک زعفرانی",
+    "path": "assets/images/menu/desserts/saffron-cake.jpg",
+    "available": true
+  }
+]
