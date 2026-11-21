@@ -715,6 +715,10 @@ html.js body.menu-page-body .site-header {
 .reserve-form select { cursor: pointer; }
 .reserve-section .section-mark::after { background: #fff8ed; }
 .reserve-section h2 { max-width: 12ch; font-family: "Rakkas", serif; font-weight: 400; font-size: clamp(2.2rem, 3.6vw, 3.8rem); line-height: 1.55; text-wrap: balance; }
+.reserve-section > div,
+.reserve-form {
+  padding-inline: 10px;
+}
 .reserve-form {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -738,6 +742,15 @@ html.js body.menu-page-body .site-header {
   padding: 0 14px;
 }
 .reserve-form input::placeholder { color: #e9cec9; opacity: 1; }
+.reserve-form input:is([type="date"], [type="time"]) {
+  box-sizing: border-box;
+  max-width: 100%;
+  direction: ltr;
+}
+.reserve-form input:is([type="date"], [type="time"]):not([hidden]) { display: block; }
+.reserve-form input:is([type="date"], [type="time"])::-webkit-date-and-time-value {
+  min-height: 1em;
+}
 .reserve-form select option { color: #fff8ed; background: #4c222b; }
 .reserve-form input:focus, .reserve-form select:focus { border-width: 2px; border-color: var(--cream); }
 .reserve-form .button-primary { grid-column: 1 / -1; height: 52px; margin-top: 6px; white-space: nowrap; background: #fff8ed; color: #642e38; }
@@ -1112,8 +1125,15 @@ html.js body.menu-page-body .site-header {
 @media(max-width:399px) {
  .reserve-form { grid-template-columns:repeat(2,minmax(0,1fr)); }
  .reserve-form > label { grid-column:1 / -1; }
- .reserve-form .time-choice { grid-column:2; }
+}
+@media(max-width:600px) {
+ .reserve-form > :is(.time-choice, label:has(> input[name="date"])) {
+  grid-template-columns:minmax(0,1fr);
+  min-width:0;
+ }
  .reserve-form > label:has(> input[name="date"]) { grid-column:1; }
+ .reserve-form > .time-choice { grid-column:2; }
+ .reserve-form input:is([type="date"], [type="time"]) { padding-inline:8px; }
 }
 @media(max-width:399px) {
  .reserve-form label.event-choice:first-child { grid-column:1 / -1; }
