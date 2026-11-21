@@ -1,0 +1,23 @@
+{
+  "baseline_preserved": 33,
+  "images": [
+    {
+      "name": "Nut Chocolate",
+      "filename": "hot-drinks/nut-chocolate.jpg",
+      "prompt_from_queue": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot nut chocolate in ivory ceramic mug, glossy nut-brown chocolate, neutral presentation with no specific nut variety shown.",
+      "source_url": "https://chatgpt.com/c/6b01c02e-c1f8-83ed-a332-0538eb57f289",
+      "sha256": "e202cad38558c15aa8616c7cc978cf2feda51cd1a737fbaec3a42fcfc1250e17"
+    },
+    {
+      "name": "Hot Lotus",
+      "filename": "hot-drinks/hot-lotus.jpg",
+      "prompt_from_queue": "Premium realistic commercial cafe photography, nostalgic and cozy. One product centered, full vessel visible with comfortable margin, slightly elevated 45-degree camera, 85mm lens feel. Matte warm beige tabletop, softly blurred plain cream wall, warm natural window light from left, soft shadow to right. Ivory elegant ceramic for hot coffee, clear elegant glass for cold drinks, no other objects. Cream, caramel, coffee brown and subtle dusty rose palette. Realistic liquid, natural microtexture, appetizing sharp focus. Square 1024x1024 or higher. No people, hands, logos, lettering, watermarks, collage or second serving. Match the lighting/background of the reference, but change the actual product accurately. Subject: hot speculoos biscuit milk drink in ivory ceramic cup, creamy caramel beige drink with finely crumbled unbranded speculoos dusting, no embossed lettering.",
+      "source_url": "https://chatgpt.com/c/6b01c02e-c1f8-83ed-a332-0538eb57f289",
+      "sha256": "d96b0f733dd21de87b06d6881619e7758852f97dfb046e172269ea8ac0400b53"
+    }
+  ],
+  "remaining": 14,
+  "status": "allowance_exhausted",
+  "allowance_notice": "ChatGPT displayed: try again tomorrow at 7:31 PM. Observed on 2026-11-21; the page did not label a timezone, so preserve this as displayed rather than assuming a precise UTC reset. No further generation attempts were submitted after the notice.",
+  "remaining_styling": "Ingredient styling applies ONLY to the 14 missing queue entries: 2\u20134 small relevant ingredient elements beside the main product. For the three signature sherbets, use ice pieces only to avoid implying unconfirmed recipes. All 35 completed files are preserved byte-for-byte; prompts are saved in ai-generation-queue.json. Generation remains paused at the previously reported ChatGPT allowance limit."
+}
