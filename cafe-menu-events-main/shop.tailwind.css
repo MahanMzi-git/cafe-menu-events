@@ -1,0 +1,49 @@
+/* Shop-only build: no Preflight reset, no café/event entry points scanned. */
+@layer theme, base, utilities;
+@import "tailwindcss/theme.css" layer(theme) prefix(shop);
+@import "tailwindcss/utilities.css" layer(utilities) prefix(shop) source(none);
+@source "../shop.html";
+@source "./shop.js";
+@source "./shop-header.js";
+
+@theme {
+  --color-navy: #102b4c;
+  --color-cream: #f8f0e5;
+  --color-gold: #c69a54;
+  --color-champagne: #d9c4a7;
+  --color-store-muted: #46566a;
+  --color-house-paper: #fffdf7;
+  --color-house-ink: #2a1912;
+  --color-house-line: rgb(74 58 48 / .22);
+  --font-persian: "Markazi Text", Tahoma, serif;
+  --font-wordmark: Georgia, "Times New Roman", serif;
+  --breakpoint-*: initial;
+  --breakpoint-phone: 601px;
+  --breakpoint-desktop: 1024px;
+}
+
+@font-face {
+  font-family: "Markazi Text";
+  src: url("assets/fonts/MarkaziText-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Markazi Text";
+  src: url("assets/fonts/MarkaziText-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+}
+
+@layer base {
+  /* Minimal scoped normalization; global Tailwind Preflight is excluded. */
+  .shop-page, .shop-page *, .shop-page *::before, .shop-page *::after { box-sizing: border-box; border: 0 solid; }
+  .shop-page a { color: inherit; text-decoration: inherit; }
+  .shop-page [hidden] { display: none !important; }
+}
+
+/* The only component rule: clipping references the SAME SVG path as the outline.
+   Images stay rectangular. Neither a raster nor border-radius defines the frame. */
+.shop-page .arch-clip { clip-path: url("#shop-architectural-arch"); }

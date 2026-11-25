@@ -48,6 +48,21 @@ Then open http://localhost:8000. The root entry uses the same tested cinematic b
 
 The two HTML entries contain the same page content. When updating the standalone entry, keep the root entry synchronized and prefix its three local asset paths with `cafe-menu-events-main/`.
 
+## Jewelry store preview
+
+Open `shop.html` for the Sinadia jewelry category page. Both café intro “فروشگاه” links open this route. It uses the approved sapphire / cream reference, exactly four reusable arched category cards, and local Markazi Text fonts. Category links are bookmarkable through `?category=necklaces`, `rings`, `bracelets`, and `earrings`.
+
+Shop styling uses locally compiled Tailwind CSS, with `shop:` utilities, no global Preflight, and one shared SVG architectural arch for image clipping and gold outlines. To change Shop styling, run the following from the repository root:
+
+```powershell
+npm ci
+npm run build
+```
+
+Use `npm run watch:shop` while editing. The generated `cafe-menu-events-main/shop.css` is committed and served directly; visitors and the café/menu/events pages need no Node runtime. The only Tailwind development dependencies are exact matching versions 4.3.5 of `tailwindcss` and `@tailwindcss/cli`.
+
+No product inventory or prices were supplied. Each category currently provides its own collection heading and a link to the existing gallery Instagram for current models and availability. See `SHOP-DESIGN.md` for the route's visual contract and `assets/jewelry/PROVENANCE.md` for the reference-image crop sources and their resolution limits.
+
 ## Live Demo
 
 https://mahanmzi-git.github.io/cafe-menu-events/

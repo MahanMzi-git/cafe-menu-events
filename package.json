@@ -1,0 +1,15 @@
+{
+  "name": "sinadia-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Sinadia site; build tooling is limited to the jewelry shop stylesheet.",
+  "scripts": {
+    "build": "npm run build:shop",
+    "build:shop": "tailwindcss -i ./cafe-menu-events-main/shop.tailwind.css -o ./cafe-menu-events-main/shop.css --minify",
+    "watch:shop": "tailwindcss -i ./cafe-menu-events-main/shop.tailwind.css -o ./cafe-menu-events-main/shop.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "tailwindcss": "4.3.5"
+  }
+}

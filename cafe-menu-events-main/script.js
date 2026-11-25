@@ -280,9 +280,6 @@ reserveForm?.addEventListener("submit", (event) => {
   enters.forEach((enter) => {
     enter.addEventListener("click", () => dismissIntro(enter.dataset.introTarget));
   });
-  document.querySelector("[data-intro-store]")?.addEventListener("click", () => {
-    document.querySelector("[data-intro-store-status]").hidden = false;
-  });
   document.addEventListener("keydown", (event) => {
     if (dismissed) return;
     if (event.key === "Escape") {
