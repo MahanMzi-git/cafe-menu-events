@@ -1392,9 +1392,9 @@ html.js body.menu-page-body .site-header {
  .story-section .story-photo { grid-column:2; grid-row:1; }
 }
 /* The supplied transparent rectangular frame and film share one coordinate system. */
-.story-framed-video { position:relative; width:100%; aspect-ratio:1696 / 2528; }
+.story-framed-video { --story-film-left:21.2%; --story-film-top:21.4%; --story-film-width:58.9%; --story-film-height:63.8%; position:relative; width:100%; aspect-ratio:1696 / 2528; }
 .story-framed-video::after { content:""; position:absolute; inset:0; background:url("assets/images/story-rectangle-frame.webp") center / 100% 100% no-repeat; pointer-events:none; }
-.story-section .story-photo .story-framed-video .story-video { position:absolute; left:20.4%; top:21%; width:59.8%; height:64.25%; aspect-ratio:auto; border-radius:0; object-fit:cover; }
+.story-section .story-photo .story-framed-video .story-video { position:absolute; left:var(--story-film-left); top:var(--story-film-top); width:var(--story-film-width); height:var(--story-film-height); aspect-ratio:auto; border-radius:0; object-fit:cover; }
 .story-section .story-photo { max-width:430px; }
 @media(min-width:761px) {
  .story-section .story-photo { width:100%; max-width:min(430px,calc((100svh - 155px) * .68)); }
@@ -1405,10 +1405,9 @@ html.js body.menu-page-body .site-header {
 @media(min-width:1041px) {
  .story-section { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); }
 }
-/* Enlarge the frame by 36% and its film by 30% where the viewport allows. */
+/* Keep the enlarged frame; match its transparent aperture with a small bleed. */
 .story-section .story-photo { max-width:584.8px; }
-.story-framed-video::before { content:""; position:absolute; left:20.4%; top:21%; width:59.8%; height:64.25%; background:#17120c; }
-.story-section .story-photo .story-framed-video .story-video { left:21.7191%; top:22.4173%; width:57.1618%; height:61.4154%; }
+.story-framed-video::before { content:""; position:absolute; left:var(--story-film-left); top:var(--story-film-top); width:var(--story-film-width); height:var(--story-film-height); background:#17120c; }
 @media(min-width:761px) {
  .story-section .story-photo { max-width:min(584.8px,calc((100svh - 155px) * .9248)); }
  .story-section { grid-template-columns:minmax(0,1.36fr) minmax(0,1fr); }

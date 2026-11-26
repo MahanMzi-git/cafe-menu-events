@@ -4,7 +4,13 @@
 
 New route: `shop.html`. The user's approved Sapphire Elegance reference and explicit category-card requirements govern this route. The existing café world and its `DESIGN.md` are preserved. This is a static HTML/CSS/JavaScript extension, with no framework or dependency additions.
 
-Mode: browse / discover jewelry categories. Exactly four categories: necklaces, rings, bracelets, earrings. No catalog, prices, delivery promises, cart, or checkout data was supplied; none is invented. Category deep links reveal the selected collection and direct visitors to the existing Sinadia gallery Instagram for current models and availability.
+Mode: browse / discover jewelry categories. Women's categories: necklaces, rings, bracelets, earrings. Men's categories, confirmed by the user: rings, bracelets, necklaces. No catalog, prices, delivery promises, cart, or checkout data was supplied; none is invented. Category deep links reveal the selected collection and direct visitors to the existing Sinadia gallery Instagram for current models and availability.
+
+## Women's and men's collections
+
+An RTL pill tab selector below the category heading switches the existing arch grid in place. Navy/cream selected states, gold outline, 44px targets, roving keyboard focus, arrow/Home/End keys, and reduced-motion support follow the shop system. Women is the default; `audience=men` selects the men's set. Category links, collection return links, reload, and browser history preserve the selected audience. Legacy category URLs still open women's categories. Switching audience clears the previous category to avoid stale collection details. Desktop shows four women's or three centered men's cards; smaller screens retain two columns.
+
+Men's category and collection images now use the three user-supplied Gemini-generated jewelry images (November 26, 2026), resized proportionally to a maximum dimension of 1000px and encoded as WebP. Per-category object positions preserve the jewelry within the existing arch crops. These are supplied illustrative assets, not evidence of product stock or materials. The renderer retains a typography fallback for categories without an image.
 
 ## Direction contract
 
