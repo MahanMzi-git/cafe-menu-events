@@ -19,11 +19,13 @@ A Persian RTL cafe website for Khane Cinadia, a warm neighborhood space for coff
 
 ## Cinematic Build
 
-The production `index.html` and the standalone page in `cafe-menu-events-main/` both serve the cinematic experience. They share the CSS, JavaScript, and supplied video in `cafe-menu-events-main/`. One muted video element is reused for the intro and hero, with menu, home, and store actions; Escape remains the keyboard exit. The hero hides the Pause button during playback and retains a Play action only when needed. The optional poster is not currently present, so a cafe-toned visual fallback appears if the video cannot load.
+The production `index.html` and the standalone page in `cafe-menu-events-main/` both serve the cinematic experience. One muted video element is reused for the intro and hero. The optimized H.264 intro is 488 KB, with a 45 KB WebP poster; this makes its first frame available quickly on slower connections. Reduced-motion visitors receive a paused intro video. The 357 KB story video loads when it approaches the viewport, pauses when out of view, and stays paused for reduced-motion visitors unless they choose playback. Both pages share the same video and poster assets. Menu, home, and store entry actions are available, and Escape remains the keyboard exit.
 
 Scrolling expands the darkened hero video across the entire viewport behind the header, logo, and navigation. The Persian sentence “سینا و نادیا / یک زوج هنری” is centered independently over it. Reduced motion keeps this composition static with manual playback available.
 
 ## Tech Stack
+
+The November 26 performance pass adds responsive WebP menu/event images, locally hosted WOFF2 fonts, deferred event-category images and cached hero animation geometry. See [PERFORMANCE.md](PERFORMANCE.md) for exact before/after asset sizes and verification scope.
 
 This lightweight static website uses HTML5, CSS3, and vanilla JavaScript. Images are loaded from Unsplash. No build step or package installation is required.
 

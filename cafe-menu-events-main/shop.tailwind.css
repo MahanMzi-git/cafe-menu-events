@@ -23,21 +23,6 @@
   --breakpoint-desktop: 1024px;
 }
 
-@font-face {
-  font-family: "Markazi Text";
-  src: url("assets/fonts/MarkaziText-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Markazi Text";
-  src: url("assets/fonts/MarkaziText-SemiBold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 600 700;
-  font-display: swap;
-}
-
 @layer base {
   /* Minimal scoped normalization; global Tailwind Preflight is excluded. */
   .shop-page, .shop-page *, .shop-page *::before, .shop-page *::after { box-sizing: border-box; border: 0 solid; }

@@ -31,12 +31,13 @@ Run this command from this `cafe-menu-events-main` folder, which contains the ci
 
 ## Video Behavior
 
-- The supplied video uses `autoplay`, `muted`, `playsinline`, `loop`, and `preload="metadata"`. Audio stays muted when playback is started or resumed.
+- The optimized H.264 intro video is approximately 488 KB at 1280 × 542 and has a 45 KB WebP poster. Its MP4 metadata is near the beginning of the file, so playback can start before the full video downloads. Visitors who prefer reduced motion see the intro video paused.
 - A single video element keeps its source and playback position when it moves from the intro to the hero. It is never cloned and its source is never reloaded by the intro code.
 - The video uses `object-fit: cover`, centered on desktop and positioned at 58% horizontally on narrow screens. Frame dimensions are reserved in CSS so media loading does not move the page layout.
 - The menu and home actions dismiss the intro and focus their destination. Escape dismisses the intro to the site identity. The store action explains that its page is not yet available.
 - Native scrolling expands the darkened frame across the full dynamic viewport, including behind the transparent header, logo, and navigation. Expansion completes at 72% of the scroll runway with a brief full-bleed hold. The sentence “سینا و نادیا / یک زوج هنری” stays centered independently from the supporting copy and menu/event actions. The header follows the scene out of view. A single scheduled `requestAnimationFrame` handles these effects; there are no wheel/touch interception handlers or scroll locks after entry.
-- Reduced motion disables automatic playback and expansion, presenting the centered sentence over a static full-viewport frame. Visitors can still choose Play. The video also pauses while it is off-screen or the browser tab is hidden.
+- Reduced motion disables automatic playback and expansion, presenting the centered sentence over a static full-viewport frame. Visitors can still choose Play. The intro video pauses while it is off-screen or the browser tab is hidden.
+- The 357 KB portrait story video has a static poster, loads shortly before it approaches the viewport, plays while visible, and pauses out of view. Reduced-motion visitors can opt in using its native controls.
 - A failed download leaves the cafe-toned fallback and navigation available. Blocked autoplay leaves a first frame and a visible Play control; playback is never required to enter.
 
 ## Project Structure
@@ -44,9 +45,12 @@ Run this command from this `cafe-menu-events-main` folder, which contains the ci
 - `index.html` - page structure, intro, hero, and Persian content
 - `styles.css` - design tokens, responsive layout, and cinematic media styles
 - `script.js` - intro lifecycle, video handoff, scroll effect, featured menu display, navigation, and reservation feedback
-- `assets/media/cinadia-hero.mp4` - the supplied cinematic hero video
+- `assets/media/cinadia-hero.mp4` - optimized 488 KB cinematic hero video
+- `assets/media/cinadia-poster.webp` - 45 KB intro poster
+- `assets/media/landingpage-video.mp4` - optimized 357 KB on-demand story video
+- `assets/media/cinadia-story-poster.webp` - story-video poster
 
-The optional `assets/media/cinadia-poster.webp` is not included, so no missing poster URL is requested. The page keeps its dark cafe-toned fallback behind the video. If that exact poster file is added later, set `poster="assets/media/cinadia-poster.webp"` on the existing video element.
+Both clips are silent H.264 MP4 files to reduce transfer and decoding work. The intro still shares one video element with the scroll-driven hero.
 
 ## Live Demo
 
@@ -58,7 +62,7 @@ The reservation form is a front-end demo. It does not send or store real reserva
 
 ## Validation and Known Limitations
 
-The original cinematic hero was checked in Chrome at desktop and mobile sizes. The latest intro and featured-menu updates were verified with `node --check`, `git diff --check`, and a comparison of all 14 menu names and prices against the requested list. A browser review of these latest updates remains outstanding.
+Both video clips were compared in Chrome before and after compression. The intro now streams its 488 KB MP4 on the constrained mobile-network test and starts playing after the poster and metadata load; the 357 KB story video is absent from the initial request list and is requested when its section approaches the viewport. The cinematic entry, hero handoff, reduced-motion behavior, story playback, and menu/navigation remain in the local preview. The font host could not be reached by the isolated test browser.
 
 The full-viewport hero refinement was checked at 320×568, 360×640, 390×844, 667×375, 768×1024, 844×390, 1440×900, and 1920×1080. Checks confirmed edge coverage behind the header, exact horizontal and vertical sentence centering, a usable expanded mobile menu, one video request during handoff, and no overlap between status messages, the sentence, and hero actions in blocked/missing-video states. Reduced-motion manual playback, no-JavaScript presentation, and direct menu-anchor entry were also checked. Normal playback runs reported no console errors or failed resources.
 

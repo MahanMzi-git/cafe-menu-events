@@ -122,6 +122,7 @@ reserveForm?.addEventListener("submit", (event) => {
   const scene = hero.querySelector(".hero-scene");
   const visual = hero.querySelector(".hero-visual");
   const copy = hero.querySelector(".hero-copy");
+  const title = copy?.querySelector("h1");
   const opening = hero.querySelector(".hero-opening");
   const details = hero.querySelector(".hero-details");
   const header = document.querySelector(".site-header");
@@ -132,6 +133,13 @@ reserveForm?.addEventListener("submit", (event) => {
   let frame = 0;
   let maxScale = 1;
   let scrollTravel = 1;
+  let heroTop = 0;
+  let visualWidth = 1;
+  let visualHeight = 1;
+  let sceneWidth = 1;
+  let titleSize = 1;
+  let openingSize = 1;
+  let lastProgress = -1;
 
   video.muted = true;
   video.defaultMuted = true;
@@ -203,29 +211,31 @@ reserveForm?.addEventListener("submit", (event) => {
 
   const renderHero = () => {
     frame = 0;
-    if (!scene || !visual || !copy) return;
-    const bounds = hero.getBoundingClientRect();
+    if (!scene || !visual || !copy || !title) return;
     const progress = reducedMotion.matches ? 1 :
-      Math.min(1, Math.max(0, -bounds.top / scrollTravel));
+      Math.min(1, Math.max(0, (window.scrollY - heroTop) / scrollTravel));
+    if (progress === lastProgress) return;
+    lastProgress = progress;
     // Finish expansion before the sticky scene ends, leaving a full-bleed hold.
     const expansion = Math.min(1, progress / 0.72);
     const eased = expansion * (2 - expansion);
     const reveal = Math.min(1, Math.max(0, (progress - 0.28) / 0.4));
     const openingFade = 1 - Math.min(1, Math.max(0, progress / 0.28));
     const detailReveal = Math.min(1, Math.max(0, (progress - 0.38) / 0.34));
-    visual.style.transform = reducedMotion.matches ? "" : "scale(" + (1 + (maxScale - 1) * eased) + ")";
+    const scale = reducedMotion.matches ? 1 : 1 + (maxScale - 1) * eased;
+    const mediaWidth = visualWidth * scale;
+    const mediaHeight = visualHeight * scale;
+    const textWidth = Math.max(0, Math.min(sceneWidth - 40, mediaWidth - 32));
+    const titleScale = Math.min(72, textWidth / 7.5, mediaHeight / 4) / titleSize;
+    const poemScale = Math.min(40, textWidth / 10.5, mediaHeight / 7) / openingSize;
+    // Resize measurements are cached. Scrolling only writes composite transforms
+    // and opacity, with no getBoundingClientRect/read-after-write layout flush.
+    visual.style.transform = reducedMotion.matches ? "" : "scale(" + scale + ")";
     visual.style.borderRadius = reducedMotion.matches ? "" : (14 * (1 - eased)) + "px";
     copy.style.opacity = reducedMotion.matches ? "" : String(reveal);
-    // Fit both messages inside the actual media frame throughout expansion.
-    const mediaBounds = visual.getBoundingClientRect();
-    const textWidth = Math.max(0, Math.min(scene.clientWidth - 40, mediaBounds.width - 32));
-    copy.style.width = textWidth + "px";
-    copy.style.height = Math.max(0, mediaBounds.height - 24) + "px";
-    copy.querySelector("h1").style.fontSize = Math.min(72, textWidth / 7.5, mediaBounds.height / 4) + "px";
+    copy.style.transform = reducedMotion.matches ? "" : "scale(" + titleScale + ")";
     if (opening) {
-      opening.style.width = textWidth + "px";
-      opening.style.height = Math.max(0, mediaBounds.height - 24) + "px";
-      opening.style.fontSize = Math.min(40, textWidth / 10.5, mediaBounds.height / 7) + "px";
+      opening.style.transform = reducedMotion.matches ? "" : "scale(" + poemScale + ")";
     }
     if (opening) opening.style.opacity = reducedMotion.matches ? "" : String(openingFade);
     // The sentence itself stays at the viewport center; only its opacity changes.
@@ -238,15 +248,39 @@ reserveForm?.addEventListener("submit", (event) => {
     if (!frame) frame = window.requestAnimationFrame(renderHero);
   };
   const measureHero = () => {
-    if (!scene || !visual) return;
+    if (!scene || !visual || !copy || !title) return;
     const size = window.getComputedStyle(visual);
-    // Fractional frame sizes plus a one-pixel overscan prevent edge seams.
-    maxScale = Math.max((scene.clientWidth + 1) / parseFloat(size.width), (scene.clientHeight + 1) / parseFloat(size.height));
+    // Batch layout reads before any writes. Only viewport/scene resize enters
+    // this path; font loading and video handoff never create a scroll loop.
+    visualWidth = parseFloat(size.width);
+    visualHeight = parseFloat(size.height);
+    sceneWidth = scene.clientWidth;
+    const sceneHeight = scene.clientHeight;
+    heroTop = hero.getBoundingClientRect().top + window.scrollY;
     scrollTravel = Math.max(1, hero.offsetHeight - scene.offsetHeight);
+    // Fractional frame sizes plus a one-pixel overscan prevent edge seams.
+    maxScale = Math.max((sceneWidth + 1) / visualWidth, (sceneHeight + 1) / visualHeight);
+    const textWidth = Math.max(1, sceneWidth - 40);
+    titleSize = Math.max(1, Math.min(72, textWidth / 7.5, sceneHeight / 4));
+    openingSize = Math.max(1, Math.min(40, textWidth / 10.5, sceneHeight / 7));
+    copy.style.width = textWidth + "px";
+    copy.style.height = Math.max(0, sceneHeight - 24) + "px";
+    title.style.fontSize = titleSize + "px";
+    if (opening) {
+      opening.style.width = textWidth + "px";
+      opening.style.height = Math.max(0, sceneHeight - 24) + "px";
+      opening.style.fontSize = openingSize + "px";
+    }
+    lastProgress = -1;
     requestHeroFrame();
   };
   window.addEventListener("scroll", requestHeroFrame, { passive: true });
   window.addEventListener("resize", measureHero, { passive: true });
+  if ("ResizeObserver" in window) {
+    const resizeObserver = new ResizeObserver(measureHero);
+    resizeObserver.observe(scene);
+    resizeObserver.observe(visual);
+  }
   measureHero();
 
   const dismissIntro = (targetSelector = "", focusHeader = true, instant = false) => {
@@ -378,12 +412,23 @@ reserveForm?.addEventListener("submit", (event) => {
 (() => {
  const tabs=[...document.querySelectorAll('.program-categories [role="tab"]')];
  if(!tabs.length) return;
+ const prepareImages=panel=>{
+  panel.querySelectorAll('img[data-event-src]').forEach(image=>{
+   if(image.dataset.eventSrcset) image.srcset=image.dataset.eventSrcset;
+   image.src=image.dataset.eventSrc;
+   image.removeAttribute('data-event-src');
+   image.removeAttribute('data-event-srcset');
+   image.hidden=false;
+  });
+ };
  const activate=(index,focus=false)=>{
   tabs.forEach((tab,i)=>{
    const active=i===index;
    tab.setAttribute('aria-selected',String(active));
    tab.tabIndex=active?0:-1;
-   document.getElementById(tab.getAttribute('aria-controls')).hidden=!active;
+   const panel=document.getElementById(tab.getAttribute('aria-controls'));
+   panel.hidden=!active;
+   if(active) prepareImages(panel);
   });
   if(focus) tabs[index].focus();
  };
@@ -415,11 +460,49 @@ reserveForm?.addEventListener("submit", (event) => {
 const storyVideo = document.querySelector('.story-video');
 if (storyVideo) {
  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
- const respectMotion = () => {
-  storyVideo.autoplay = !motionPreference.matches;
-  if (motionPreference.matches) storyVideo.pause();
+ storyVideo.controls = motionPreference.matches;
+ let storyIsNear = false;
+ let storyFailed = false;
+ const prepareStory = () => {
+  const source = storyVideo.dataset.src;
+  if (!source || storyVideo.hasAttribute('src')) return;
+  storyVideo.setAttribute('src', source);
+  storyVideo.removeAttribute('data-src');
+  storyVideo.load();
  };
- respectMotion();
- motionPreference.addEventListener('change', respectMotion);
+ const playStory = () => {
+  if (!storyIsNear || motionPreference.matches || document.hidden || storyFailed) return;
+  prepareStory();
+  storyVideo.play().catch(() => { storyVideo.controls = true; });
+ };
+ storyVideo.addEventListener('error', () => {
+  storyFailed = true;
+  storyVideo.controls = true;
+ });
+ storyVideo.addEventListener('play', prepareStory);
+ const storyObserver = 'IntersectionObserver' in window
+  ? new IntersectionObserver(([entry]) => {
+    storyIsNear = entry.isIntersecting;
+    if (storyIsNear) {
+     prepareStory();
+     playStory();
+    } else storyVideo.pause();
+   }, { rootMargin: '160px 0px', threshold: 0 })
+  : null;
+ if (storyObserver) storyObserver.observe(storyVideo);
+ else {
+  storyIsNear = true;
+  prepareStory();
+  playStory();
+ }
+ motionPreference.addEventListener('change', () => {
+  storyVideo.controls = motionPreference.matches || storyFailed;
+  if (motionPreference.matches) storyVideo.pause();
+  else playStory();
+ });
+ document.addEventListener('visibilitychange', () => {
+  if (document.hidden) storyVideo.pause();
+  else playStory();
+ });
 }
 

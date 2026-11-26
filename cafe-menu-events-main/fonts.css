@@ -1,0 +1,22 @@
+/* Shared, locally hosted fonts. Preserve Persian shaping and variable weights. */
+@font-face {
+  font-family: "Markazi Text";
+  src: url("assets/fonts/MarkaziText.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rakkas";
+  src: url("assets/fonts/Rakkas.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinadia Nastaliq";
+  src: url("assets/fonts/NotoNastaliqUrdu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}

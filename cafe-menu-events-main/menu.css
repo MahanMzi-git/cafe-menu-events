@@ -3,7 +3,7 @@
  --menu-ruby:#8b3023;
  --menu-muted:#624c43;
  background-color:#f6f0e4;
- background-image:url('assets/images/menu-art/menu-background-upper.png'),url('assets/images/menu-art/linen.jpg');
+ background-image:url('assets/images/menu-art/menu-background-upper.webp'),url('assets/images/menu-art/linen.webp');
  background-position:left top,left top;
  background-size:clamp(280px,52vw,620px) auto,auto;
  background-repeat:no-repeat,repeat;
