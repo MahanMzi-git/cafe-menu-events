@@ -38,6 +38,12 @@
 /* Approved compact mobile hero: split layout and four gold contours. */
 .shop-page .hero-frame-inner,
 .shop-page .hero-frame-extra { display: none; }
+/* Match the supplied desktop reference: cream sweep and one fine inner curve. */
+.shop-page .hero-reference-detail { display: none; }
+@media (min-width: 768px) {
+  .shop-page .hero-reference-detail { display: block; }
+}
+
 @media (max-width: 767px) {
   .shop-page .hero-jewel > .hero-clip { inset: 5px; }
   .shop-page .hero-jewel > svg {
