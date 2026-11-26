@@ -9,7 +9,6 @@
   const input = header.querySelector("#shop-header-query");
   const list = header.querySelector("[data-shop-search-results]");
   const status = header.querySelector("[data-shop-search-status]");
-  const categories = window.sinadiaJewelryCategories || [];
   const normalize = value => value.replace(/ي/g, "ی").replace(/ك/g, "ک").replace(/[\u200c\u064b-\u065f]/g, "").trim();
 
   function closeSearch(restoreFocus = false) {
@@ -18,6 +17,8 @@
     if (restoreFocus) trigger.focus({preventScroll:true});
   }
   function renderResults() {
+    const audience = new URLSearchParams(location.search).get("audience") === "men" ? "men" : "women";
+    const categories = window.sinadiaJewelryAudiences?.[audience] || window.sinadiaJewelryCategories || [];
     const query = normalize(input.value);
     const matches = categories.filter(category => normalize(category.name).includes(query));
     list.replaceChildren();
@@ -26,7 +27,7 @@
       const item = document.createElement("li");
       const link = document.createElement("a");
       link.className = "shop:block shop:min-h-11 shop:border-b shop:border-house-line shop:py-2 shop:text-lg shop:hover:underline shop:outline-0 shop:outline-solid shop:focus-visible:outline-2 shop:focus-visible:outline-house-ink";
-      link.href = `shop.html?category=${encodeURIComponent(category.id)}#collection`;
+      link.href = `shop.html?audience=${audience}&category=${encodeURIComponent(category.id)}#collection`;
       link.textContent = category.name;
       item.append(link);
       list.append(item);

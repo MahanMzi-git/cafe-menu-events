@@ -7,10 +7,10 @@
     <meta name="description" content="گالری زیورآلات سینادیا؛ کشف مجموعه‌های گردنبند، انگشتر، دستبند و گوشواره." />
     <title>گالری زیورآلات | سینادیا</title>
     <link rel="icon" href="cafe-menu-events-main/assets/images/sinadia-logo-blue.png" />
-    <link rel="stylesheet" href="cafe-menu-events-main/shop.css?v=perf-2" />
-    <script src="cafe-menu-events-main/shop-data.js?v=rings-wood-1" defer></script>
-    <script src="cafe-menu-events-main/shop.js?v=gallery-edit-1" defer></script>
-    <script src="cafe-menu-events-main/shop-header.js?v=1" defer></script>
+    <link rel="stylesheet" href="cafe-menu-events-main/shop.css?v=audience-1" />
+    <script src="cafe-menu-events-main/shop-data.js?v=women-photos-2" defer></script>
+    <script src="cafe-menu-events-main/shop.js?v=audience-1" defer></script>
+    <script src="cafe-menu-events-main/shop-header.js?v=audience-1" defer></script>
   <link rel="preload" href="cafe-menu-events-main/assets/fonts/MarkaziText.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="cafe-menu-events-main/fonts.css?v=perf-1" />
 </head>
@@ -92,7 +92,13 @@
             <h2 class="shop:m-0 shop:text-[29px] shop:leading-[1.4] shop:font-medium shop:text-balance shop:phone:text-[clamp(29px,3vw,36px)]" id="categories-title">خرید بر اساس دسته‌بندی</h2>
             <span class="heading-ornament shop:mt-[9px] shop:flex shop:items-center shop:gap-2.5 shop:text-gold shop:before:h-px shop:before:w-8 shop:before:bg-champagne shop:before:content-[''] shop:after:h-px shop:after:w-8 shop:after:bg-champagne shop:after:content-['']" aria-hidden="true"><svg class="shop:size-[7px] shop:fill-current shop:stroke-none" viewBox="0 0 10 10"><path d="m5 0 5 5-5 5-5-5Z"/></svg></span>
           </div>
-          <div class="jewelry-categories shop:mx-auto shop:grid shop:max-w-[650px] shop:grid-cols-2 shop:gap-x-3.5 shop:gap-y-[18px] shop:phone:gap-6 shop:desktop:max-w-none shop:desktop:grid-cols-4 shop:desktop:gap-[22px]" data-category-grid></div>
+          <div class="shop:mx-auto shop:mb-7 shop:grid shop:w-[min(280px,100%)] shop:grid-cols-2 shop:gap-1 shop:rounded-full shop:border shop:border-gold shop:bg-cream shop:p-1 shop:phone:mb-8" role="tablist" aria-label="مجموعهٔ زیورآلات" data-audience-tabs hidden>
+            <button class="shop:min-h-11 shop:cursor-pointer shop:rounded-full shop:bg-transparent shop:px-6 shop:py-1 shop:font-persian shop:text-[23px] shop:leading-normal shop:text-navy shop:transition-colors shop:duration-200 shop:hover:bg-champagne/40 shop:aria-selected:bg-navy shop:aria-selected:text-cream shop:focus-visible:outline-2 shop:focus-visible:outline-navy shop:outline-offset-2 shop:motion-reduce:transition-none" type="button" role="tab" id="audience-women" aria-selected="true" aria-controls="audience-panel" data-audience="women">زنانه</button>
+            <button class="shop:min-h-11 shop:cursor-pointer shop:rounded-full shop:bg-transparent shop:px-6 shop:py-1 shop:font-persian shop:text-[23px] shop:leading-normal shop:text-navy shop:transition-colors shop:duration-200 shop:hover:bg-champagne/40 shop:aria-selected:bg-navy shop:aria-selected:text-cream shop:focus-visible:outline-2 shop:focus-visible:outline-navy shop:outline-offset-2 shop:motion-reduce:transition-none" type="button" role="tab" id="audience-men" aria-selected="false" aria-controls="audience-panel" tabindex="-1" data-audience="men">مردانه</button>
+          </div>
+          <div id="audience-panel">
+            <div class="jewelry-categories shop:mx-auto shop:grid shop:max-w-[650px] shop:grid-cols-2 shop:gap-x-3.5 shop:gap-y-[18px] shop:phone:gap-6 shop:desktop:max-w-none shop:desktop:grid-cols-4 shop:desktop:gap-[22px] shop:data-[audience=men]:desktop:max-w-[840px] shop:data-[audience=men]:desktop:grid-cols-3" data-category-grid></div>
+          </div>
           <noscript>
             <nav class="category-fallback shop:flex shop:flex-wrap shop:justify-center shop:gap-4 shop:[&_a]:min-h-11 shop:[&_a]:p-2 shop:[&_a]:underline" aria-label="دسته‌بندی زیورآلات">
               <a href="shop.html?category=necklaces#collection">گردنبند</a>
