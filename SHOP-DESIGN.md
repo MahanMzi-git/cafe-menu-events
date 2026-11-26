@@ -42,6 +42,10 @@ All five original image files remain byte-for-byte unchanged. The earlier symmet
 
 Nineteen protected café/menu/events sources and original jewelry images match their pre-refactor SHA-256 hashes. Eight root/standalone menu/events captures at 390/1440px pass visual regression comparison: seven PNGs match exactly; one has only tiny Chrome photograph-decoding variation (at most 5/255 per channel, mean under 0.001), not content or layout drift. Evidence and repeatable local checks are under `.impeccable/review/tailwind-refactor/`.
 
+## Approved mobile hero
+
+On November 26, 2026 the user approved the separate `shop-mobile-test.html` experiment for the main shop. Below 768px, the hero keeps the photo on the right and copy on the left in equal columns. Typography and spacing scale for the viewport, with 16px descriptive text and a 44px button target. The photo uses a 43% horizontal focal point and the existing asymmetric clip. Four fine non-scaling gold contours at 1/5/9/13px insets follow that geometry; the additional contours are hidden above the mobile breakpoint. Styles live in the existing shop Tailwind source and compiled stylesheet. Desktop composition, wording, category data, and navigation remain unchanged. The test page remains available for reference.
+
 ## Gallery editorial extension
 
 The shop now continues with an asymmetric gallery edit, a navy typographic story called “آبیِ ماندگار”, and a visit invitation using the existing gallery contact and address. These are editorial entrances to the four existing categories, not invented product listings or claims of stock, material, price, or manufacturing. The original hero, four category arches, and two-column footer remain the visual anchors.

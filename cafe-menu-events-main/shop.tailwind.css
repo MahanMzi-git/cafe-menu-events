@@ -34,3 +34,101 @@
    Categories keep their shared arch; the hero has opposing curved corners. */
 .shop-page .arch-clip { clip-path: url("#shop-architectural-arch"); }
 .shop-page .hero-clip { clip-path: url("#shop-hero-frame"); }
+
+/* Approved compact mobile hero: split layout and four gold contours. */
+.shop-page .hero-frame-inner,
+.shop-page .hero-frame-extra { display: none; }
+@media (max-width: 767px) {
+  .shop-page .hero-jewel > .hero-clip { inset: 5px; }
+  .shop-page .hero-jewel > svg {
+    inset: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    stroke-width: 1.15px;
+  }
+  .shop-page .hero-jewel > svg use { vector-effect: non-scaling-stroke; }
+  .shop-page .hero-jewel > .hero-frame-inner {
+    display: block;
+    inset: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    stroke-width: 1px;
+  }
+  .shop-page .hero-jewel > .hero-frame-extra {
+    display: block;
+    stroke-width: 1px;
+  }
+  .shop-page .hero-jewel > .hero-frame-third {
+    inset: 9px;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+  }
+  .shop-page .hero-jewel > .hero-frame-fourth {
+    inset: 13px;
+    width: calc(100% - 26px);
+    height: calc(100% - 26px);
+  }
+  .shop-page .store-hero {
+    grid-template-columns: minmax(0, 50fr) minmax(0, 50fr);
+    align-items: stretch;
+    min-height: 280px;
+  }
+  .shop-page .store-hero > .hero-jewel {
+    grid-column: 1;
+    grid-row: 1;
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+  .shop-page .store-hero .hero-jewel img {
+    object-position: 43% 50%;
+  }
+  .shop-page .store-hero > img {
+    width: 22%;
+    height: 80%;
+    opacity: .45;
+  }
+  .shop-page .store-hero-copy {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 16px clamp(10px, 2.6vw, 20px);
+  }
+  .shop-page .store-hero-copy > p:first-child {
+    font-size: clamp(13px, 2.9vw, 17px);
+    line-height: 1.4;
+  }
+  .shop-page .store-hero-copy > span {
+    margin-block: 7px;
+    gap: 6px;
+  }
+  .shop-page .store-hero-copy > span::before,
+  .shop-page .store-hero-copy > span::after { width: 22px; }
+  .shop-page .store-hero-copy h1 > span:first-child {
+    font-size: clamp(29px, 6.5vw, 44px);
+    line-height: 1.1;
+  }
+  .shop-page .store-hero-copy h1 > span:last-child {
+    margin-top: 5px;
+    font-size: clamp(19px, 4.1vw, 28px);
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  .shop-page .store-hero-copy > p:last-of-type {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.45;
+    text-wrap: pretty;
+  }
+  .shop-page .store-hero-copy .store-button {
+    min-height: 44px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  .shop-page .store-hero-copy .store-button > span {
+    min-height: 34px;
+    padding: 3px clamp(8px, 2vw, 16px);
+    gap: 7px;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+  .shop-page .store-hero-copy .store-button svg { width: 14px; height: 14px; }
+}
