@@ -8,17 +8,19 @@
     <title>گالری زیورآلات | سینادیا</title>
     <link rel="icon" href="cafe-menu-events-main/assets/images/sinadia-logo-blue.png" />
     <link rel="preload" href="cafe-menu-events-main/assets/fonts/MarkaziText-Regular.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="stylesheet" href="cafe-menu-events-main/shop.css?v=footer-columns-1" />
-    <script src="cafe-menu-events-main/shop-data.js?v=1" defer></script>
-    <script src="cafe-menu-events-main/shop.js?v=tailwind-arch-1" defer></script>
+    <link rel="stylesheet" href="cafe-menu-events-main/shop.css?v=hero-reference-1" />
+    <script src="cafe-menu-events-main/shop-data.js?v=rings-wood-1" defer></script>
+    <script src="cafe-menu-events-main/shop.js?v=gallery-edit-1" defer></script>
     <script src="cafe-menu-events-main/shop-header.js?v=1" defer></script>
   </head>
   <body class="shop-page shop:m-0 shop:bg-cream shop:font-persian shop:text-xl shop:leading-[1.65] shop:text-navy shop:antialiased shop:selection:bg-navy shop:selection:text-cream shop:underline-offset-[5px] shop:[--store-gutter:20px] shop:phone:[--store-gutter:clamp(20px,5.1vw,64px)]">
-    <!-- One geometry: a classical arch ending at 48% height, two straight walls, flat base. -->
+    <!-- Category arches stay shared; the hero follows the supplied asymmetric reference. -->
     <svg width="0" height="0" class="shop:absolute shop:pointer-events-none" aria-hidden="true" focusable="false">
       <defs>
         <path id="shop-arch-curve" d="M0 1000V480C0 214.9 223.86 0 500 0S1000 214.9 1000 480V1000Z" vector-effect="non-scaling-stroke" />
         <clipPath id="shop-architectural-arch" clipPathUnits="objectBoundingBox"><use href="#shop-arch-curve" transform="scale(.001)" /></clipPath>
+        <path id="shop-hero-curve" d="M0 251V146C0 65 65 0 145 0H551V105C551 186 470 251 400 251Z" vector-effect="non-scaling-stroke" />
+        <clipPath id="shop-hero-frame" clipPathUnits="objectBoundingBox"><use href="#shop-hero-curve" transform="scale(.001814882 .003984064)" /></clipPath>
       </defs>
     </svg>
     <a class="skip-link shop:fixed shop:top-3 shop:start-4 shop:z-50 shop:-translate-y-[160%] shop:bg-navy shop:px-5 shop:py-2.5 shop:text-cream shop:focus:translate-y-0 shop:focus-visible:outline-2 shop:focus-visible:outline-champagne shop:outline-0 shop:outline-solid shop:outline-offset-4" href="#categories">رفتن به دسته‌بندی‌ها</a>
@@ -65,18 +67,21 @@
     </header>
 
     <main>
-      <section class="store-hero shop:mx-auto shop:grid shop:max-w-[1440px] shop:grid-cols-1 shop:items-stretch shop:phone:min-h-[290px] shop:phone:grid-cols-[54%_46%] shop:desktop:min-h-[325px]" aria-labelledby="store-title">
-        <div class="hero-jewel shop:relative shop:w-full shop:row-start-1 shop:mt-2.5 shop:aspect-[551/251] shop:min-w-0 shop:phone:mt-0 shop:phone:aspect-[1.55] shop:phone:self-center shop:desktop:aspect-[551/251] shop:desktop:min-h-[325px]">
-          <div class="arch-clip shop:absolute shop:inset-0 shop:overflow-hidden shop:bg-navy">
-            <!-- Non-destructive framing excludes the source comp's painted corners. -->
-            <img class="shop:block shop:h-full shop:w-full shop:max-w-full shop:origin-[0%_100%] shop:scale-[1.34] shop:object-cover shop:object-center shop:phone:object-[78%_100%]" src="assets/jewelry/sapphire-hero.webp" width="551" height="251" alt="گردنبند و انگشتر یاقوت آبی روی پارچهٔ شامپاینی، در کنار گل‌های سرمه‌ای" fetchpriority="high" />
+      <section class="store-hero shop:relative shop:isolate shop:mx-auto shop:grid shop:max-w-[1440px] shop:grid-cols-1 shop:bg-cream shop:min-[768px]:grid-cols-[54%_46%]" aria-labelledby="store-title">
+        <img class="shop:pointer-events-none shop:absolute shop:bottom-0 shop:left-0 shop:-z-1 shop:h-[250px] shop:w-[100px] shop:object-contain shop:object-left-bottom shop:opacity-65 shop:min-[768px]:h-full shop:min-[768px]:w-[17%] shop:min-[768px]:opacity-100" src="assets/jewelry/hero-botanical.webp" width="190" height="299" alt="" aria-hidden="true" decoding="async" />
+        <div class="hero-jewel shop:relative shop:row-start-1 shop:aspect-[551/251] shop:min-w-0 shop:bg-cream shop:min-[768px]:aspect-auto shop:min-[768px]:min-h-[clamp(260px,24vw,348px)]">
+          <span class="shop:pointer-events-none shop:absolute shop:right-0 shop:bottom-0 shop:h-1/2 shop:w-1/3 shop:bg-navy" aria-hidden="true"></span>
+          <div class="hero-clip shop:absolute shop:inset-0 shop:overflow-hidden">
+            <img class="shop:block shop:size-full shop:object-cover shop:object-center" src="assets/jewelry/sapphire-hero.webp" width="551" height="251" alt="گردنبند و انگشتر یاقوت آبی روی پارچهٔ شامپاینی، در کنار گل‌های سرمه‌ای" fetchpriority="high" decoding="async" />
           </div>
-          <svg class="arch-outline shop:pointer-events-none shop:absolute shop:inset-0 shop:block shop:size-full shop:overflow-visible shop:fill-none shop:stroke-current shop:stroke-[1.2px] shop:text-gold" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"><use href="#shop-arch-curve" /></svg>
+          <svg class="shop:pointer-events-none shop:absolute shop:inset-0 shop:size-full shop:fill-none shop:stroke-current shop:stroke-[1.1px] shop:text-gold" viewBox="0 0 551 251" preserveAspectRatio="none" aria-hidden="true"><use href="#shop-hero-curve" /></svg>
         </div>
-        <div class="store-hero-copy shop:self-center shop:px-5 shop:pt-7 shop:pb-[18px] shop:text-center shop:phone:py-[34px] shop:desktop:px-[clamp(20px,4vw,60px)]">
-          <h1 class="shop:m-0 shop:text-[36px] shop:leading-[1.2] shop:font-semibold shop:text-balance shop:phone:text-[clamp(32px,3.5vw,49px)] shop:phone:leading-[1.25]" id="store-title">جواهراتی با الهام از<br />لحظه‌های خاص</h1>
-          <p class="shop:mt-3 shop:mb-[18px] shop:text-xl shop:leading-[1.55] shop:phone:mt-[18px] shop:phone:mb-[22px] shop:phone:text-[19px] shop:phone:leading-[1.6] shop:desktop:text-[21px]">ظرافتی ماندگار، با امضای سینادیا.<br />برای درخشیدن در داستان زندگی شما.</p>
-          <a class="store-button shop:inline-flex shop:min-h-11 shop:items-center shop:justify-center shop:gap-[18px] shop:rounded-sm shop:border shop:border-navy shop:bg-navy shop:px-6 shop:py-[5px] shop:text-lg shop:text-cream shop:transition-colors shop:duration-300 shop:hover:border-gold shop:outline-offset-5 shop:focus-visible:outline-2 shop:focus-visible:outline-navy shop:outline-0 shop:outline-solid shop:phone:text-[19px] shop:motion-reduce:transition-none" href="#categories">کشف مجموعه‌ها <svg class="shop:size-[19px] shop:shrink-0 shop:fill-none shop:stroke-current shop:stroke-[1.4] shop:text-gold shop:[stroke-linecap:round] shop:[stroke-linejoin:round]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></a>
+        <div class="store-hero-copy shop:relative shop:z-1 shop:flex shop:min-w-0 shop:flex-col shop:items-center shop:justify-center shop:px-5 shop:pt-6 shop:pb-5 shop:text-center shop:min-[768px]:px-7 shop:min-[768px]:py-4 shop:desktop:px-12">
+          <p class="shop:m-0 shop:text-lg shop:leading-[1.25] shop:font-medium shop:text-hero-gold shop:min-[768px]:text-[clamp(16px,1.45vw,19px)]">زیبایی ماندگار، با امضای سینادیا</p>
+          <span class="shop:my-1.5 shop:flex shop:items-center shop:gap-1.5 shop:text-gold shop:before:h-px shop:before:w-8 shop:before:bg-current shop:before:content-[''] shop:after:h-px shop:after:w-8 shop:after:bg-current shop:after:content-['']" aria-hidden="true"><svg class="shop:size-2 shop:fill-current" viewBox="0 0 10 10"><path d="m5 0 5 5-5 5-5-5Z"/></svg></span>
+          <h1 class="shop:m-0 shop:font-semibold shop:text-balance" id="store-title"><span class="shop:block shop:text-[44px] shop:leading-[1.05] shop:min-[768px]:text-[clamp(39px,3.8vw,52px)]">جواهراتی</span><span class="shop:block shop:text-[clamp(28px,5.5vw,35px)] shop:leading-[1.25] shop:min-[768px]:text-[clamp(28px,3.05vw,42px)]">با الهام از لحظه‌های خاص</span></h1>
+          <p class="shop:mt-3 shop:mb-0 shop:max-w-[36ch] shop:text-lg shop:leading-[1.4] shop:min-[768px]:mt-2 shop:min-[768px]:text-[clamp(17px,1.5vw,20px)]">طراحی‌های منحصربه‌فرد سینادیا.<br />برای درخشیدن در مهم‌ترین لحظات زندگی شما.</p>
+          <a class="store-button shop:group shop:mt-2 shop:inline-flex shop:min-h-11 shop:items-center shop:rounded-full shop:outline-offset-3 shop:focus-visible:outline-2 shop:focus-visible:outline-navy" href="#categories"><span class="shop:inline-flex shop:min-h-8 shop:items-center shop:justify-center shop:gap-3 shop:rounded-full shop:border shop:border-gold/55 shop:bg-navy shop:px-6 shop:py-0.5 shop:text-lg shop:leading-[1.35] shop:text-champagne shop:group-hover:bg-store-muted">مشاهدهٔ فروشگاه <svg class="shop:size-4 shop:shrink-0 shop:fill-none shop:stroke-current shop:stroke-[1.4] shop:text-gold" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></span></a>
         </div>
       </section>
 
@@ -108,6 +113,85 @@
             <p class="shop:mt-0 shop:mb-6 shop:max-w-[40ch] shop:text-store-muted">برای مشاهدهٔ مدل‌ها، اطلاع از موجودی و جزئیات این مجموعه، با گالری سینادیا در ارتباط باشید.</p>
             <a class="store-button shop:inline-flex shop:min-h-11 shop:items-center shop:justify-center shop:gap-[18px] shop:rounded-sm shop:border shop:border-navy shop:bg-navy shop:px-6 shop:py-[5px] shop:text-lg shop:text-cream shop:transition-colors shop:duration-300 shop:hover:border-gold shop:outline-offset-5 shop:focus-visible:outline-2 shop:focus-visible:outline-navy shop:outline-0 shop:outline-solid shop:phone:text-[19px] shop:motion-reduce:transition-none" href="https://www.instagram.com/sinadia_artgallery/" target="_blank" rel="noopener noreferrer">دیدن مدل‌ها در اینستاگرام <span class="shop:sr-only">، باز شدن در زبانهٔ جدید</span><svg class="shop:size-[19px] shop:shrink-0 shop:fill-none shop:stroke-current shop:stroke-[1.4] shop:text-gold shop:[stroke-linecap:round] shop:[stroke-linejoin:round]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></a>
           </div>
+        </div>
+      </section>
+
+      <section class="gallery-edit shop:mx-auto shop:w-[min(1120px,calc(100%-var(--store-gutter)*2))] shop:scroll-mt-3 shop:border-t shop:border-champagne shop:pt-8 shop:pb-12 shop:phone:pt-12 shop:phone:pb-20" id="gallery-edit" aria-labelledby="edit-title">
+        <div class="shop:mb-6 shop:flex shop:flex-wrap shop:items-end shop:justify-between shop:gap-x-6 shop:gap-y-2 shop:phone:mb-9">
+          <div>
+            <h2 class="shop:m-0 shop:text-[32px] shop:leading-tight shop:font-medium shop:phone:text-[42px]" id="edit-title">منتخب گالری</h2>
+            <p class="shop:mt-2 shop:mb-0 shop:text-lg shop:text-store-muted shop:phone:text-xl">یک نگاه نزدیک‌تر، یک انتخاب شخصی‌تر.</p>
+          </div>
+          <a class="shop:inline-flex shop:min-h-11 shop:items-center shop:gap-3 shop:text-lg shop:underline shop:decoration-champagne shop:underline-offset-8 shop:outline-offset-4 shop:hover:decoration-navy shop:focus-visible:outline-2 shop:focus-visible:outline-navy" href="#categories">همهٔ مجموعه‌ها <svg class="shop:size-[18px] shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></a>
+        </div>
+
+        <div class="shop:grid shop:min-w-0 shop:grid-cols-1 shop:gap-8 shop:phone:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] shop:phone:items-start shop:phone:gap-[clamp(24px,4vw,56px)]">
+          <a class="shop:group shop:block shop:min-w-0 shop:outline-offset-5 shop:focus-visible:outline-2 shop:focus-visible:outline-navy" href="#blue-story" aria-label="کشف روایت آبیِ ماندگار">
+            <div class="shop:relative shop:aspect-[1.3] shop:overflow-hidden shop:bg-champagne/30">
+              <img class="shop:block shop:size-full shop:scale-[1.05] shop:object-cover shop:object-center shop:transition-transform shop:duration-500 shop:group-hover:scale-[1.075] shop:motion-reduce:transition-none shop:motion-reduce:group-hover:scale-[1.05]" src="assets/jewelry/sapphire-hero.webp" width="551" height="251" alt="آویز و انگشتر با نگین آبی روی پارچهٔ شامپاینی" loading="lazy" decoding="async" />
+              <span class="shop:absolute shop:right-3 shop:bottom-3 shop:grid shop:size-11 shop:place-items-center shop:rounded-full shop:bg-cream shop:text-navy shop:phone:right-5 shop:phone:bottom-5" aria-hidden="true"><svg class="shop:size-5 shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6v12h12"/></svg></span>
+            </div>
+            <div class="shop:mt-4 shop:flex shop:items-baseline shop:justify-between shop:gap-3">
+              <h3 class="shop:m-0 shop:text-[27px] shop:leading-tight shop:font-medium shop:phone:text-[32px]">وقتی آبی، روایت می‌کند</h3>
+              <span class="shop:shrink-0 shop:text-base shop:text-store-muted shop:phone:text-lg">کشف روایت</span>
+            </div>
+          </a>
+
+          <div class="shop:min-w-0 shop:phone:pt-8 shop:desktop:pt-12">
+            <p class="shop:mt-0 shop:mb-6 shop:max-w-[30ch] shop:text-[25px] shop:leading-[1.45] shop:phone:mb-9 shop:phone:text-[30px]">گاهی تمامِ تفاوت،<br />در کوچک‌ترین جزئیات است.</p>
+            <div class="shop:grid shop:grid-cols-2 shop:gap-4 shop:phone:gap-5">
+              <a class="shop:group shop:block shop:min-w-0 shop:outline-offset-5 shop:focus-visible:outline-2 shop:focus-visible:outline-navy" href="shop.html?category=rings#collection">
+                <div class="shop:aspect-[.9] shop:overflow-hidden shop:bg-champagne/30">
+                  <img class="shop:block shop:size-full shop:object-cover shop:object-[50%_58%] shop:transition-transform shop:duration-500 shop:group-hover:scale-[1.025] shop:motion-reduce:transform-none shop:motion-reduce:transition-none" src="assets/jewelry/rings.webp" width="172" height="119" alt="نمای نزدیک انگشترهای ظریف روی پارچهٔ روشن" loading="lazy" decoding="async" />
+                </div>
+                <h3 class="shop:mt-3 shop:mb-0 shop:text-[23px] shop:leading-tight shop:font-medium shop:phone:text-[26px]">برای دست‌های تو</h3>
+                <span class="shop:mt-1 shop:flex shop:min-h-11 shop:items-center shop:gap-2 shop:text-lg shop:text-store-muted shop:group-hover:underline">دیدن انگشترها <svg class="shop:size-4 shop:shrink-0 shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></span>
+              </a>
+              <a class="shop:group shop:mt-9 shop:block shop:min-w-0 shop:outline-offset-5 shop:focus-visible:outline-2 shop:focus-visible:outline-navy shop:phone:mt-12" href="shop.html?category=earrings#collection">
+                <div class="shop:aspect-[.9] shop:overflow-hidden shop:bg-champagne/30">
+                  <img class="shop:block shop:size-full shop:object-cover shop:object-[55%_50%] shop:transition-transform shop:duration-500 shop:group-hover:scale-[1.025] shop:motion-reduce:transform-none shop:motion-reduce:transition-none" src="assets/jewelry/earrings.webp" width="181" height="132" alt="گوشواره با نگین آبی بر گوش مدل" loading="lazy" decoding="async" />
+                </div>
+                <h3 class="shop:mt-3 shop:mb-0 shop:text-[23px] shop:leading-tight shop:font-medium shop:phone:text-[26px]">در قابِ چهره</h3>
+                <span class="shop:mt-1 shop:flex shop:min-h-11 shop:items-center shop:gap-2 shop:text-lg shop:text-store-muted shop:group-hover:underline">دیدن گوشواره‌ها <svg class="shop:size-4 shop:shrink-0 shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blue-story shop:scroll-mt-3 shop:bg-navy shop:text-cream shop:selection:bg-cream shop:selection:text-navy" id="blue-story" aria-labelledby="blue-title">
+        <div class="shop:mx-auto shop:grid shop:w-[min(1120px,calc(100%-var(--store-gutter)*2))] shop:grid-cols-1 shop:gap-8 shop:py-11 shop:phone:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] shop:phone:items-center shop:phone:gap-12 shop:phone:py-16 shop:desktop:py-20">
+          <div class="shop:min-w-0">
+            <h2 class="shop:m-0 shop:text-[clamp(64px,8vw,96px)] shop:leading-[.98] shop:font-medium" id="blue-title">آبیِ<br /><span class="shop:pr-[.65em]">ماندگار</span></h2>
+            <p class="shop:mt-5 shop:mb-0 shop:text-xl shop:text-champagne">روایتی از رنگ، نور و جزئیات.</p>
+          </div>
+          <div class="shop:min-w-0 shop:border-t shop:border-champagne/40 shop:pt-6 shop:phone:pt-8">
+            <p class="shop:mt-0 shop:mb-6 shop:max-w-[34ch] shop:text-[23px] shop:leading-[1.65] shop:phone:text-[27px]">آبی، نقطهٔ آرامِ یک ترکیب است؛ کنار رنگ‌های روشن می‌درخشد و با یک زیور ظریف، به انتخابی شخصی تبدیل می‌شود.</p>
+            <div class="shop:flex shop:flex-wrap shop:gap-x-6 shop:gap-y-2">
+              <a class="shop:inline-flex shop:min-h-11 shop:items-center shop:gap-3 shop:text-xl shop:underline shop:decoration-gold shop:underline-offset-8 shop:outline-offset-5 shop:hover:decoration-cream shop:focus-visible:outline-2 shop:focus-visible:outline-cream" href="shop.html?category=necklaces#collection">کشف گردنبندها <svg class="shop:size-[18px] shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></a>
+              <a class="shop:inline-flex shop:min-h-11 shop:items-center shop:gap-3 shop:text-xl shop:underline shop:decoration-gold shop:underline-offset-8 shop:outline-offset-5 shop:hover:decoration-cream shop:focus-visible:outline-2 shop:focus-visible:outline-cream" href="shop.html?category=earrings#collection">کشف گوشواره‌ها <svg class="shop:size-[18px] shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></a>
+            </div>
+            <details class="shop:group shop:mt-6 shop:border-t shop:border-champagne/40 shop:pt-2 shop:phone:mt-8">
+              <summary class="shop:flex shop:min-h-12 shop:cursor-pointer shop:list-none shop:items-center shop:justify-between shop:gap-4 shop:text-lg shop:outline-offset-4 shop:focus-visible:outline-2 shop:focus-visible:outline-cream shop:[&::-webkit-details-marker]:hidden">چطور کنار هم بپوشیم؟ <svg class="shop:size-4 shop:shrink-0 shop:fill-none shop:stroke-current shop:stroke-[1.4] shop:group-open:rotate-45" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary>
+              <p class="shop:mt-1 shop:mb-3 shop:max-w-[40ch] shop:text-lg shop:leading-[1.8] shop:text-cream/85">بگذارید یک قطعه مرکز توجه باشد. کنار یک گردنبند چشمگیر، گوشواره‌ای ساده انتخاب کنید؛ با لباس‌های ساده هم رنگ نگین بیشتر به چشم می‌آید.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-visit shop:mx-auto shop:grid shop:w-[min(1120px,calc(100%-var(--store-gutter)*2))] shop:grid-cols-1 shop:gap-6 shop:py-12 shop:phone:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] shop:phone:items-center shop:phone:gap-12 shop:phone:py-20" id="gallery-visit" aria-labelledby="visit-title">
+        <div>
+          <h2 class="shop:m-0 shop:text-[38px] shop:leading-[1.2] shop:font-medium shop:phone:text-[clamp(38px,4.4vw,58px)]" id="visit-title">از صفحه،<br />به خانهٔ سینادیا.</h2>
+          <p class="shop:mt-4 shop:mb-0 shop:max-w-[30ch] shop:text-xl shop:text-store-muted shop:phone:text-[23px]">بعضی انتخاب‌ها را باید از نزدیک دید.<br />برای دیدن زیورها، مهمان خانه باشید.</p>
+        </div>
+        <div class="shop:min-w-0 shop:border-t shop:border-champagne shop:pt-5 shop:phone:pt-6">
+          <h3 class="shop:mt-0 shop:mb-2 shop:text-[25px] shop:font-medium">یک قرار در گالری</h3>
+          <p class="shop:mt-0 shop:mb-5 shop:max-w-[36ch] shop:text-lg shop:text-store-muted shop:phone:text-xl">برای اطلاع از موجودی و هماهنگی بازدید، با گالری در ارتباط باشید.</p>
+          <div class="shop:flex shop:flex-wrap shop:items-center shop:gap-x-6 shop:gap-y-3">
+            <a class="shop:inline-flex shop:min-h-12 shop:items-center shop:justify-center shop:gap-3 shop:rounded-sm shop:bg-navy shop:px-6 shop:py-2 shop:text-lg shop:text-cream shop:outline-offset-4 shop:hover:bg-store-muted shop:focus-visible:outline-2 shop:focus-visible:outline-navy" href="tel:+989158585443">تماس با خانه <svg class="shop:size-[18px] shop:fill-none shop:stroke-current shop:stroke-[1.4] shop:[stroke-linecap:round] shop:[stroke-linejoin:round]" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 3 3 5-3 3c2 3 3 4 6 6l3-3 5 3-1 4C11 23 1 13 3 4Z"/></svg></a>
+            <a class="shop:inline-flex shop:min-h-12 shop:items-center shop:gap-2 shop:text-lg shop:underline shop:decoration-champagne shop:underline-offset-8 shop:outline-offset-4 shop:hover:decoration-navy shop:focus-visible:outline-2 shop:focus-visible:outline-navy" href="https://www.instagram.com/sinadia_artgallery/" target="_blank" rel="noopener noreferrer">گفت‌وگو با گالری <svg class="shop:size-4 shop:fill-none shop:stroke-current shop:stroke-[1.4]" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg><span class="shop:sr-only">، باز شدن در زبانهٔ جدید</span></a>
+          </div>
+          <address class="shop:mt-5 shop:mb-0 shop:max-w-[38ch] shop:text-lg shop:leading-[1.8] shop:not-italic shop:text-store-muted">مشهد، بلوار احمدآباد، پاستور، پاستور ۹، پلاک ۴، محلهٔ بهشت</address>
         </div>
       </section>
     </main>

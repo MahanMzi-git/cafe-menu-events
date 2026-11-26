@@ -10,6 +10,7 @@
   --color-navy: #102b4c;
   --color-cream: #f8f0e5;
   --color-gold: #c69a54;
+  --color-hero-gold: #956327;
   --color-champagne: #d9c4a7;
   --color-store-muted: #46566a;
   --color-house-paper: #fffdf7;
@@ -44,6 +45,7 @@
   .shop-page [hidden] { display: none !important; }
 }
 
-/* The only component rule: clipping references the SAME SVG path as the outline.
-   Images stay rectangular. Neither a raster nor border-radius defines the frame. */
+/* Each native clip references the same SVG geometry as its matching outline.
+   Categories keep their shared arch; the hero has opposing curved corners. */
 .shop-page .arch-clip { clip-path: url("#shop-architectural-arch"); }
+.shop-page .hero-clip { clip-path: url("#shop-hero-frame"); }

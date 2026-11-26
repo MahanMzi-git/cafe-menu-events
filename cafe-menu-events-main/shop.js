@@ -21,6 +21,7 @@
     image.width = category.width;
     image.height = category.height;
     image.decoding = "async";
+    image.loading = "lazy";
     image.style.objectPosition = category.position;
     link.querySelector("[data-category-name]").textContent = category.name;
     return link;

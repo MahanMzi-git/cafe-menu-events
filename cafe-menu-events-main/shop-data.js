@@ -14,11 +14,11 @@ window.sinadiaJewelryCategories = Object.freeze([
     id: "rings",
     name: "انگشتر",
     title: "انگشترهای سینادیا",
-    image: "assets/jewelry/rings.webp",
-    width: 172,
-    height: 119,
+    image: "assets/jewelry/rings-wood.webp",
+    width: 800,
+    height: 635,
     position: "50% 58%",
-    alt: "انگشترهای طلای ظریف با نگین‌های روشن روی پارچهٔ کرم"
+    alt: "انگشترهای طلایی با نگین و طرح برگ روی شاخهٔ چوبی"
   }),
   Object.freeze({
     id: "bracelets",
