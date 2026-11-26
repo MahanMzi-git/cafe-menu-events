@@ -96,8 +96,7 @@
   }
   trigger.addEventListener('click', async () => {
     if (header.classList.contains('search-open')) { closeSearch(); return; }
-    header.querySelector('.menu-toggle')?.setAttribute('aria-expanded', 'false');
-    header.querySelector('.main-nav')?.classList.remove('open');
+    header.dispatchEvent(new Event('site-nav-close'));
     header.classList.add('search-open');
     trigger.setAttribute('aria-expanded', 'true');
     field.inert = false;
@@ -114,13 +113,14 @@
   });
   input.addEventListener('input', render);
   header.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && header.classList.contains('search-open')) {
       event.preventDefault();
       closeSearch();
     }
   });
   field.querySelector('button').addEventListener('click', () => closeSearch());
   header.querySelector('.menu-toggle')?.addEventListener('click', () => closeSearch(false));
+  header.addEventListener('site-nav-open', () => closeSearch(false));
   document.addEventListener('click', event => {
     if (!search.contains(event.target) && !results.contains(event.target)) closeSearch(false);
   });

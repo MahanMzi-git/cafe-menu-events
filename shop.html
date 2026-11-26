@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="cafe-menu-events-main/shop.css?v=hero-webp-sweep-1" />
     <script src="cafe-menu-events-main/shop-data.js?v=women-photos-2" defer></script>
     <script src="cafe-menu-events-main/shop.js?v=audience-1" defer></script>
-    <script src="cafe-menu-events-main/shop-header.js?v=audience-1" defer></script>
+    <script src="cafe-menu-events-main/shop-header.js?v=shared-nav-3" defer></script>
   <link rel="preload" href="cafe-menu-events-main/assets/fonts/MarkaziText.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="cafe-menu-events-main/fonts.css?v=perf-1" />
+  <link rel="stylesheet" href="cafe-menu-events-main/shared-header.css?v=header-toggle-4" />
+    <script src="cafe-menu-events-main/shared-header.js?v=header-toggle-4" defer></script>
 </head>
   <body class="shop-page shop:m-0 shop:bg-cream shop:font-persian shop:text-xl shop:leading-[1.65] shop:text-navy shop:antialiased shop:selection:bg-navy shop:selection:text-cream shop:underline-offset-[5px] shop:[--store-gutter:20px] shop:phone:[--store-gutter:clamp(20px,5.1vw,64px)]">
     <!-- Category arches stay shared; the hero follows the supplied asymmetric reference. -->
@@ -26,34 +28,34 @@
     </svg>
     <a class="skip-link shop:fixed shop:top-3 shop:start-4 shop:z-50 shop:-translate-y-[160%] shop:bg-navy shop:px-5 shop:py-2.5 shop:text-cream shop:focus:translate-y-0 shop:focus-visible:outline-2 shop:focus-visible:outline-champagne shop:outline-0 shop:outline-solid shop:outline-offset-4" href="#categories">رفتن به دسته‌بندی‌ها</a>
     <div class="store-note shop:bg-navy shop:px-5 shop:py-1 shop:text-center shop:text-[13px] shop:leading-normal shop:text-cream shop:phone:pt-[3px] shop:phone:pb-1 shop:phone:text-[15px]">از خانهٔ سینادیا، برای لحظه‌های ماندگار</div>
-    <header class="store-header shop:sticky shop:top-3 shop:z-20 shop:mx-auto shop:mt-3 shop:mb-6 shop:grid shop:h-16 shop:w-[calc(100%-24px)] shop:max-w-[1160px] shop:grid-cols-[minmax(0,1fr)_auto] shop:items-center shop:gap-2 shop:rounded-full shop:border shop:border-house-line shop:bg-house-paper shop:px-[clamp(10px,3vw,30px)] shop:text-house-ink shop:shadow-[0_6px_24px_#2a191226]" aria-label="راهبری خانه سینادیا">
+    <header class="store-header site-header home-header shop:sticky shop:top-3 shop:z-20 shop:mx-auto shop:mt-3 shop:mb-6 shop:grid shop:h-16 shop:w-[calc(100%-24px)] shop:max-w-[1160px] shop:grid-cols-[minmax(0,1fr)_auto] shop:items-center shop:gap-2 shop:rounded-full shop:border shop:border-house-line shop:bg-house-paper shop:px-[clamp(10px,3vw,30px)] shop:text-house-ink shop:shadow-[0_6px_24px_#2a191226]" aria-label="راهبری خانه سینادیا">
       <a class="brand shop:relative shop:z-1 shop:flex shop:w-fit shop:max-w-full shop:min-w-0 shop:items-center shop:gap-2 shop:outline-0 shop:outline-solid shop:outline-offset-2 shop:focus-visible:outline-2 shop:focus-visible:outline-house-ink shop:max-[360px]:gap-[5px]" href="index.html#hero" aria-label="خانه سینادیا، صفحه اصلی">
         <img class="shop:block shop:size-[55.2px] shop:shrink-0 shop:object-contain shop:max-[360px]:size-[43.7px]" src="cafe-menu-events-main/assets/images/sinadia-logo-blue.png" width="56" height="56" alt="" />
-        <span class="shop:grid shop:min-w-0 shop:leading-[1.25]">
+        <span class="brand-copy shop:grid shop:min-w-0 shop:leading-[1.25]">
           <strong class="shop:text-lg shop:font-bold shop:whitespace-nowrap shop:max-[360px]:text-base">خانه سینادیا</strong>
           <small class="shop:mt-1 shop:block shop:font-wordmark shop:text-[9px] shop:tracking-[.07em]" lang="en" dir="ltr">KHANE CINADIA</small>
         </span>
       </a>
-      <div class="shop:pointer-events-none shop:absolute shop:inset-x-[clamp(10px,3vw,30px)] shop:top-1/2 shop:flex shop:-translate-y-1/2 shop:items-center shop:justify-end shop:gap-1 shop:[&>*]:pointer-events-auto">
+      <div class="home-header-actions shop:pointer-events-none shop:absolute shop:inset-x-[clamp(10px,3vw,30px)] shop:top-1/2 shop:flex shop:-translate-y-1/2 shop:items-center shop:justify-end shop:gap-1 shop:[&>*]:pointer-events-auto">
         <button class="shop:grid shop:size-11 shop:shrink-0 shop:cursor-pointer shop:place-items-center shop:bg-transparent shop:p-0 shop:text-inherit shop:outline-0 shop:outline-solid shop:outline-offset-2 shop:focus-visible:outline-2 shop:focus-visible:outline-house-ink" type="button" data-shop-search-trigger aria-label="جست‌وجو در فروشگاه" aria-expanded="false" aria-controls="shop-header-search">
           <svg class="shop:size-[22px] shop:fill-none shop:stroke-current shop:stroke-[1.5] shop:[stroke-linecap:round] shop:[stroke-linejoin:round]" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
         </button>
         <a class="shop:grid shop:size-11 shop:shrink-0 shop:place-items-center shop:outline-0 shop:outline-solid shop:outline-offset-2 shop:focus-visible:outline-2 shop:focus-visible:outline-house-ink" href="index.html#hero" aria-label="رفتن به خانه">
           <svg class="shop:size-[22px] shop:fill-none shop:stroke-current shop:stroke-[1.5] shop:[stroke-linecap:round] shop:[stroke-linejoin:round]" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg>
         </a>
-        <details class="shop:relative shop:shrink-0" data-shop-menu>
-          <summary class="shop:grid shop:size-11 shop:cursor-pointer shop:list-none shop:place-items-center shop:rounded-full shop:border shop:border-house-line shop:bg-transparent shop:outline-0 shop:outline-solid shop:outline-offset-2 shop:focus-visible:outline-2 shop:focus-visible:outline-house-ink shop:[&::-webkit-details-marker]:hidden" aria-label="فهرست اصلی" aria-controls="shop-main-nav">
-            <svg class="shop:size-[22px] shop:fill-none shop:stroke-current shop:stroke-[1.5] shop:[stroke-linecap:round]" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5h18M3 16.5h18"/></svg>
-          </summary>
-          <nav class="shop:absolute shop:top-[calc(100%+18px)] shop:left-0 shop:grid shop:max-h-[54dvh] shop:w-[220px] shop:max-w-[calc(100vw-48px)] shop:gap-1 shop:overflow-auto shop:rounded-[14px] shop:border shop:border-house-line shop:bg-house-paper shop:p-2 shop:text-lg shop:shadow-[0_18px_44px_#2a19121f] shop:[&_a]:block shop:[&_a]:px-3 shop:[&_a]:py-2 shop:[&_a]:outline-0 shop:[&_a]:outline-solid shop:[&_a:focus-visible]:outline-2 shop:[&_a:focus-visible]:outline-house-ink shop:[&_a:hover]:underline shop:[&_[aria-current=page]]:underline shop:[&_[aria-current=page]]:decoration-gold" id="shop-main-nav" aria-label="فهرست اصلی">
-            <a href="index.html#hero">خانه</a>
-            <a href="shop.html" aria-current="page">فروشگاه</a>
-            <a href="menu.html">منوی کافه</a>
-            <a href="events.html">رویدادها</a>
-            <a class="gallery-contact" href="https://www.instagram.com/sinadia_artgallery/" target="_blank" rel="noopener noreferrer" aria-label="ارتباط با گالری، باز شدن در زبانهٔ جدید">ارتباط با گالری <span class="shop:sr-only">، باز شدن در زبانهٔ جدید</span></a>
-          </nav>
-        </details>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span>
+          <span class="shop:sr-only">فهرست</span>
+        </button>
       </div>
+      <div class="header-nav-tray"><nav class="main-nav" id="main-nav" aria-label="فهرست اصلی">
+        <a href="menu.html">منو</a>
+        <a href="events.html">رویدادها</a>
+        <a href="shop.html" aria-current="page">فروشگاه</a>
+        <a href="index.html#story">داستان ما</a>
+        <a class="nav-reserve" href="index.html#reserve">رزرو میز</a>
+        <a class="gallery-contact" href="https://www.instagram.com/sinadia_artgallery/" target="_blank" rel="noopener noreferrer" aria-label="ارتباط با گالری، باز شدن در زبانهٔ جدید">ارتباط با گالری</a>
+      </nav></div>
       <section class="shop:absolute shop:top-[calc(100%+8px)] shop:left-0 shop:w-[min(440px,100%)] shop:rounded-[14px] shop:border shop:border-house-line shop:bg-house-paper shop:p-4 shop:shadow-[0_8px_24px_#2a191226]" id="shop-header-search" aria-label="جست‌وجو در فروشگاه" hidden>
         <form role="search" data-shop-search-form>
           <label class="shop:mb-2 shop:block shop:text-lg" for="shop-header-query">جست‌وجو در زیورآلات</label>
