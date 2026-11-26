@@ -50,6 +50,10 @@ Then open http://localhost:8000. The root entry uses the same tested cinematic b
 
 The two HTML entries contain the same page content. When updating the standalone entry, keep the root entry synchronized and prefix its three local asset paths with `cafe-menu-events-main/`.
 
+## Shared responsive navigation
+
+The house, menu, events, and jewelry shop share `cafe-menu-events-main/shared-header.js` and `shared-header.css`, including the standalone café entries and the retained shop test page. The menu button remains visible beside the home and search controls at every width, with its icon and accessible label reflecting whether navigation is open. Below 700px it opens a viewport-constrained dropdown, choosing above or below the header according to available space. Escape restores focus to the button; outside clicks, link selection, and opening search dismiss the mobile menu. Search and navigation never remain open together. Resizing clears the mobile state. At 700px and above, the button manually opens or closes the existing single-row navigation below the header; downward scrolling still hides that row, while upward scrolling or keyboard focus restores it. Reduced motion disables navigation transitions. The shop keeps its gallery search, gallery contact, category routes, and collection controls.
+
 ## Jewelry store preview
 
 Open `shop.html` for the Sinadia jewelry category page. Both café intro “فروشگاه” links open this route. It uses the approved sapphire / cream reference, exactly four reusable arched category cards, and local Markazi Text fonts. Category links are bookmarkable through `?category=necklaces`, `rings`, `bracelets`, and `earrings`.

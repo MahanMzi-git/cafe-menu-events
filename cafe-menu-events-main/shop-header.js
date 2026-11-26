@@ -1,9 +1,8 @@
-/* Shop navigation follows the site's floating house header; other routes are untouched. */
+/* Gallery search cooperates with the site's shared navigation controller. */
 (() => {
   "use strict";
   const header = document.querySelector(".store-header");
   if (!header) return;
-  const menu = header.querySelector("[data-shop-menu]");
   const trigger = header.querySelector("[data-shop-search-trigger]");
   const panel = header.querySelector("#shop-header-search");
   const input = header.querySelector("#shop-header-query");
@@ -13,6 +12,7 @@
 
   function closeSearch(restoreFocus = false) {
     panel.hidden = true;
+    header.classList.remove("search-open");
     trigger.setAttribute("aria-expanded", "false");
     if (restoreFocus) trigger.focus({preventScroll:true});
   }
@@ -35,8 +35,9 @@
   }
   trigger.addEventListener("click", () => {
     if (!panel.hidden) { closeSearch(true); return; }
-    menu.open = false;
+    header.dispatchEvent(new Event("site-nav-close"));
     panel.hidden = false;
+    header.classList.add("search-open");
     trigger.setAttribute("aria-expanded", "true");
     renderResults();
     input.focus({preventScroll:true});
@@ -47,16 +48,15 @@
     event.preventDefault();
     list.querySelector("a")?.click();
   });
-  menu.addEventListener("toggle", () => { if (menu.open) closeSearch(); });
+  header.addEventListener("site-nav-open", () => closeSearch());
   header.addEventListener("keydown", event => {
     if (event.key !== "Escape") return;
     if (!panel.hidden) { event.preventDefault(); closeSearch(true); }
-    else if (menu.open) { event.preventDefault(); menu.open = false; menu.querySelector("summary").focus(); }
   });
   document.addEventListener("click", event => {
-    if (!header.contains(event.target)) { closeSearch(); menu.open = false; }
+    if (!header.contains(event.target)) closeSearch();
   });
   header.addEventListener("focusout", () => requestAnimationFrame(() => {
-    if (!header.contains(document.activeElement)) { closeSearch(); menu.open = false; }
+    if (!header.contains(document.activeElement)) closeSearch();
   }));
 })();
