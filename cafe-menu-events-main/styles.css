@@ -1178,14 +1178,12 @@ html.js body.menu-page-body .site-header {
  .program-info p { font-size:17px; }
  .program-info .button { padding:8px 14px; font-size:16px; }
 }
-/* Supplied blue textile, with a separate traditional edge. */
-.events-page-body { position:relative; isolation:isolate; background:#06304b url("assets/images/events-page-background.jpg") center top / 478px auto repeat; }
-.events-page-body::before { content:""; position:absolute; z-index:-1; inset:0 0 0 auto; width:60px; background:url("assets/images/events-page-border.png") right top / 60px auto repeat-y; pointer-events:none; }
+/* Supplied blue textile without a decorative side strip. */
+.events-page-body { display:flow-root; position:relative; isolation:isolate; background:#06304b url("assets/images/events-page-background.jpg") center top / 478px auto repeat; }
+.events-page-body::before { content:none; }
 .events-page-body .programs-main { padding-inline:48px; }
-@media(max-width:1200px) { .events-page-body .programs-main { margin-right:60px; } }
 @media(max-width:600px) {
- .events-page-body::before { width:24px; background-size:24px auto; }
- .events-page-body .programs-main { margin-right:24px; padding-inline:16px; }
+ .events-page-body .programs-main { padding-inline:16px; }
 }
 /* Portrait event posters, two per row. */
 .programs-list { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; gap:24px; }
@@ -1299,10 +1297,8 @@ html.js body.menu-page-body .site-header {
  .events-page-body .programs-main { margin-top:-100px; padding-top:0; }
  .programs-heading h1 { font-size:34px; margin:10px 0 20px; }
 }
-/* Keep the wall paintings in frame and carry the textile edge over the hero. */
+/* Keep the wall paintings in frame. */
 .events-page-body > .events-hero img { object-position:center top; }
-.events-page-body::before { z-index:2; }
-.events-page-body::before { background-image:url("assets/images/events-ruby-border.jpg"); }
 /* Explicit navigation affordances without filter-style pills. */
 .programs-heading .program-categories a { cursor:pointer; gap:9px; transition:color 160ms ease, background-color 160ms ease; }
 .programs-heading .program-categories a::before { content:""; width:7px; height:7px; flex:none; border-inline-end:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg); opacity:.8; }
@@ -1312,16 +1308,16 @@ html.js body.menu-page-body .site-header {
 .programs-heading .program-categories [aria-selected="true"]::before { opacity:1; }
 @media(max-width:380px) { .programs-heading .program-categories a { gap:5px; } .programs-heading .program-categories a::before { width:5px; height:5px; } }
 /* Shared capsule navigation. */
-.programs-heading .program-categories { display:flex; gap:5px; padding:6px; border:1px solid #fff8ed80; border-radius:999px; background:#082a40; }
-.programs-heading .program-categories a { flex:1; justify-content:center; border-radius:999px; padding:10px 12px; font-size:20px; }
+.programs-heading .program-categories { display:flex; gap:5px; padding:4px; border:1px solid #fff8ed80; border-radius:999px; background:#082a40; }
+.programs-heading .program-categories a { flex:1; justify-content:center; border-radius:999px; padding:6px 12px; font-size:20px; }
 .programs-heading .program-categories a::before, .programs-heading .program-categories a::after { display:none; }
 .programs-heading .program-categories [aria-selected="true"] { background:#fff8ed; color:#16364b; }
 .programs-heading .program-categories a:hover { background:#ffffff18; }
 .programs-heading .program-categories [aria-selected="true"]:hover { background:#fff8ed; }
 @media(max-width:600px) {
- .programs-heading .program-categories a { min-width:0; white-space:normal; text-align:center; font-size:17px; padding:9px 7px; }
+ .programs-heading .program-categories a { min-width:0; white-space:normal; text-align:center; font-size:17px; padding:5px 7px; }
 }
-@media(max-width:380px) { .programs-heading .program-categories { gap:2px; padding:4px; } .programs-heading .program-categories a { font-size:14px; padding:8px 4px; } }
+@media(max-width:380px) { .programs-heading .program-categories { gap:2px; padding:3px; } .programs-heading .program-categories a { font-size:14px; padding:5px 4px; } }
 .events-page-body .header-home { display:grid; place-items:center; width:44px; height:44px; flex:none; margin-inline-start:auto; margin-inline-end:12px; border:1px solid #34262560; border-radius:50%; color:#342625; }
 .header-home svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linejoin:round; stroke-linecap:round; }
 .events-page-body .header-home:hover { background:#ead6bb; }
