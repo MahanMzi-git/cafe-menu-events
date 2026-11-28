@@ -67,6 +67,25 @@
   max-width: 760px;
   margin-inline: auto;
 }
+/* Keep the original event time with its image in every category view. */
+.events-curves-preview .program-art {
+  position: relative;
+}
+.events-curves-preview .program-art > .program-clock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: var(--curve-paper);
+  color: #16364b;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
 /* In All Events, flatten category groups into one continuous card grid. */
 .events-curves-preview.events-show-all .programs-catalog {
   display: grid;
@@ -80,6 +99,11 @@
 }
 .events-curves-preview.events-show-all .program-category > h2 {
   display: none;
+}
+@media (min-width: 1024px) {
+  .events-curves-preview.events-show-all .programs-catalog {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 @media (max-width: 600px) {
   .events-curves-preview .program-categories {
