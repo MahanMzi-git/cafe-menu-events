@@ -392,14 +392,18 @@ reserveForm?.addEventListener("submit", (event) => {
    image.hidden=false;
   });
  };
+ const panels=[...document.querySelectorAll('.program-category[role="tabpanel"]')];
  const activate=(index,focus=false)=>{
+  const visibleIds=new Set(tabs[index].getAttribute('aria-controls').split(/\s+/));
+  document.body.classList.toggle('events-show-all',visibleIds.size>1);
   tabs.forEach((tab,i)=>{
    const active=i===index;
    tab.setAttribute('aria-selected',String(active));
    tab.tabIndex=active?0:-1;
-   const panel=document.getElementById(tab.getAttribute('aria-controls'));
-   panel.hidden=!active;
-   if(active) prepareImages(panel);
+  });
+  panels.forEach(panel=>{
+   panel.hidden=!visibleIds.has(panel.id);
+   if(!panel.hidden) prepareImages(panel);
   });
   if(focus) tabs[index].focus();
  };

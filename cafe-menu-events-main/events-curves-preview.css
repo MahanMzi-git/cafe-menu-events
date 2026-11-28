@@ -1,0 +1,125 @@
+/* Isolated concept: the existing Sinadia palette, photo, typography and events. */
+.events-curves-preview {
+  --curve-paper: #fff8ed;
+  --curve-sea: #06304b;
+}
+.events-curves-preview > .events-hero {
+  position: relative;
+  height: clamp(430px, 72svh, 680px);
+  margin: -76px 0 0;
+  overflow: hidden;
+  border-radius: clamp(88px, 15vw, 220px) 0 0 0;
+  clip-path: url(#events-hero-wave);
+  background: var(--curve-sea);
+}
+.events-curves-preview > .events-hero img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  object-fit: cover;
+  object-position: 50% top;
+}
+.events-curves-preview > .events-hero::after {
+  z-index: 1;
+  background: linear-gradient(270deg, rgba(3, 22, 35, .78) 0%, rgba(3, 22, 35, .50) 34%, rgba(3, 22, 35, 0) 76%), linear-gradient(180deg, rgba(3, 22, 35, .05) 25%, rgba(3, 22, 35, .24) 46%, rgba(3, 22, 35, .88) 100%);
+}
+.events-curves-caption {
+  position: absolute;
+  z-index: 2;
+  inset-inline-start: max(48px, calc((100vw - 1100px) / 2 + 48px));
+  bottom: clamp(108px, 14vw, 148px);
+  color: var(--curve-paper);
+  text-align: start;
+}
+.events-curves-caption h1 {
+  margin: 0;
+  font-family: Rakkas, serif;
+  font-size: clamp(46px, 6vw, 80px);
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.events-curves-defs {
+  position: absolute;
+  pointer-events: none;
+}
+.events-curves-edge {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.events-curves-edge path {
+  stroke: var(--curve-paper);
+  stroke-width: 3;
+}
+.events-curves-preview .programs-main {
+  margin-top: -12px;
+  padding-top: 0;
+}
+.events-curves-preview .programs-heading {
+  margin-bottom: 30px;
+}
+.events-curves-preview .program-categories {
+  max-width: 760px;
+  margin-inline: auto;
+}
+/* In All Events, flatten category groups into one continuous card grid. */
+.events-curves-preview.events-show-all .programs-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+}
+.events-curves-preview.events-show-all .program-category:not([hidden]),
+.events-curves-preview.events-show-all .program-category:not([hidden]) > .programs-list {
+  display: contents;
+}
+.events-curves-preview.events-show-all .program-category > h2 {
+  display: none;
+}
+@media (max-width: 600px) {
+  .events-curves-preview .program-categories {
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 3px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-padding-inline: 6px;
+  }
+  .events-curves-preview .program-categories::-webkit-scrollbar {
+    display: none;
+  }
+  .events-curves-preview .program-categories a {
+    flex: 1 0 auto;
+    min-width: max-content;
+    min-height: 44px;
+    padding: 4px 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .events-curves-preview > .events-hero {
+    height: clamp(400px, 72svh, 540px);
+    border-top-left-radius: 96px;
+  }
+  .events-curves-preview > .events-hero img {
+    height: 100%;
+    min-height: 0;
+    object-position: 48% top;
+  }
+  .events-curves-caption {
+    inset-inline-start: 24px;
+    bottom: 104px;
+  }
+  .events-curves-caption h1 {
+    font-size: clamp(42px, 9vw, 48px);
+  }
+  .events-curves-preview .programs-main {
+    margin-top: -8px;
+    padding-top: 0;
+  }
+}
